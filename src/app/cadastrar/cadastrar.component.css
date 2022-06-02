@@ -8,3 +8,24 @@
     border: 1px solid;
     background-color: rgba(255, 255, 255, 0.7);
 }
+.form-area input::placeholder {
+    color: var(--color-yellow);
+  }
+
+.cadastrar-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font-cadastrar{
+    color: var(--color-yellow);
+}
