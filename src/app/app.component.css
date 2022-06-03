@@ -3,3 +3,7 @@ a{
     text-decoration: none;
     color: unset;
 }
+
+body{
+    margin: 0;
+}
