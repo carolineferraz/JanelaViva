@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  position: relative;
 }
 
 .container-left,
@@ -62,10 +63,11 @@
 }
 
 #bg-img {
-  background-image: url("../../assets/img/bg-entrar.avif");
+  background-image: url("../../assets/img/home-bg.png");
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center bottom;
 }
 
 .link-entrar {
