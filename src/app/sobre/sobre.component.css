@@ -9,3 +9,15 @@
 h2, p, h5 {
     color: white;
 }
+
+#bg-sobre{
+    background-color: var(--color-yellow);
+}
+
+span{
+    font-weight: bold;
+}
+
+.it{
+    font-style: italic;
+}
