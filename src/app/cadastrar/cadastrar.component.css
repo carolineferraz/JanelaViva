@@ -29,3 +29,21 @@
 .font-cadastrar{
     color: var(--color-yellow);
 }
+.janela-viva{
+    display: flex;
+    justify-content: right;
+    width: 60;
+    margin-top: 15px;  
+    padding-right: 5%; 
+   
+}
+.icone{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    padding-right: 3%;
+    
+}
+.fs-18{
+    font-size: 18pt;
+}
