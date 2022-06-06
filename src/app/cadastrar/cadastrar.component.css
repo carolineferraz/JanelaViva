@@ -47,3 +47,16 @@
 .fs-18{
     font-size: 18pt;
 }
+
+.border-r{
+    border-radius: 15px;
+}
+
+.cor-select{
+    color: var(--color-yellow);
+}
+
+.btn-cad{
+    color: var(--color-white);
+    border-radius: 15px;
+}
