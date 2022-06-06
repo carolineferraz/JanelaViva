@@ -1,14 +1,11 @@
-.container-fluid{
-    margin: 0;
-    padding: 0;
+#bg-color-red {
+    background-color: #FE543B;
 }
 
-img{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#bg-color-blue {
+    background-color: #00D7EC;
+}
 
+h2, p, h5 {
+    color: white;
 }
