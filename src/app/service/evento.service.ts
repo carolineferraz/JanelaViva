@@ -32,4 +32,5 @@ export class EventoService {
   deleteEvento(id: number){
     return this.http.delete(`https://janelaviva.herokuapp.com/eventos/${id}`, this.token) 
   }
+  
 }

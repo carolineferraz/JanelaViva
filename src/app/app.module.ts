@@ -17,6 +17,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { FotoUsuarioComponent } from './foto-usuario/foto-usuario.component';
 import { EventoComponent } from './evento/evento.component';
 import { EventoDeleteComponent } from './evento-delete/evento-delete.component';
+import { EventoEditComponent } from './evento-edit/evento-edit.component';
 
 
 
@@ -34,7 +35,8 @@ import { EventoDeleteComponent } from './evento-delete/evento-delete.component';
     UsuarioComponent,
     FotoUsuarioComponent,
     EventoComponent,
-    EventoDeleteComponent
+    EventoDeleteComponent,
+    EventoEditComponent
 
   ],
   imports: [
