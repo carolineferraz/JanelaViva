@@ -15,6 +15,7 @@ import { InputComentarioComponent } from './input-comentario/input-comentario.co
 import { NoticiasComponent } from './noticias/noticias.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { FotoUsuarioComponent } from './foto-usuario/foto-usuario.component';
+import { EventoComponent } from './evento/evento.component';
 
 
 
@@ -31,6 +32,7 @@ import { FotoUsuarioComponent } from './foto-usuario/foto-usuario.component';
     NoticiasComponent,
     UsuarioComponent,
     FotoUsuarioComponent,
+    EventoComponent,
    
     
   ],
