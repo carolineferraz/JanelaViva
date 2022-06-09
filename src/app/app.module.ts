@@ -16,6 +16,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { FotoUsuarioComponent } from './foto-usuario/foto-usuario.component';
 import { EventoComponent } from './evento/evento.component';
+import { EventoDeleteComponent } from './evento-delete/evento-delete.component';
 
 
 
@@ -33,8 +34,8 @@ import { EventoComponent } from './evento/evento.component';
     UsuarioComponent,
     FotoUsuarioComponent,
     EventoComponent,
-   
-    
+    EventoDeleteComponent
+
   ],
   imports: [
     BrowserModule,
