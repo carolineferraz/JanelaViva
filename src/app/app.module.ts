@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { InputComentarioComponent } from './input-comentario/input-comentario.component';
 import { NoticiasComponent } from './noticias/noticias.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NoticiasComponent } from './noticias/noticias.component';
     SobreComponent,
     InicioComponent,
     InputComentarioComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    UsuarioComponent,
+    
   ],
   imports: [
     BrowserModule,
