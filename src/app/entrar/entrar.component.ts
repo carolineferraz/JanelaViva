@@ -32,7 +32,7 @@ export class EntrarComponent implements OnInit {
         environment.avaliacao = this.usuarioLogin.avaliacao;
         environment.habilidades = this.usuarioLogin.habilidades;
 
-        console.log({ ...environment })
+        this.router.navigate(['/inicio'])
       }),
       error: err => {
         if (err.status === 401) {
