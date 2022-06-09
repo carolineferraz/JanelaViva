@@ -11,6 +11,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+import { InputComentarioComponent } from './input-comentario/input-comentario.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InicioComponent } from './inicio/inicio.component';
     EntrarComponent,
     CadastrarComponent,
     SobreComponent,
-    InicioComponent
+    InicioComponent,
+    InputComentarioComponent
   ],
   imports: [
     BrowserModule,
