@@ -57,68 +57,145 @@
     </form>
   </div>
 </nav>
-
+<!-- INÍCIO DO CONTÊINER QUE POSSUI TODOS OS COMPONENTES DE MENU -->
 <div class="container-fluid">
-  <div class="row d-flex mt-5">
-        <div class="col-md-4 d-flex justify-content-center">
-          <div class="card " style="width: 12rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+  <div class="row border mt-5">
+    <!-- INÍCIO DO COMPONENTE COM AS INFORMAÇÕES DA PESSOA USUÁRIA-->
+    <div class="col-md-3">
+      <div class="card card-shadow" style="width: 80%; margin: 0 auto">
+        <div class="app-user-profile-wrapper">
+          <app-user-profile></app-user-profile>
+        </div>
+        <div class="card-body card-align-center">
+          <h5 class="card-title">Nome Usuário</h5>
+          <div class="star-section">
+            <img src="../../assets//img/star-full.svg" alt="" />
+            <img src="../../assets//img/star-full.svg" alt="" />
+            <img src="../../assets//img/star-full.svg" alt="" />
+            <img src="../../assets//img/star-empty.svg" alt="" />
+            <img src="../../assets//img/star-empty.svg" alt="" />
+          </div>
+          <div class="description-section">
+            <p class="description">Uma breve descrição das habilidades aqui</p>
+          </div>
+
+          <div class="event-section">
+            <h5>Nome do Evento Atual</h5>
+            <ul>
+              <li>
+                <a href="#">Cronograma de atividades</a>
+              </li>
+              <li>
+                <a href="#">Participantes</a>
+              </li>
             </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+          </div>
+          <div class="event-history-section">
+            <ul>
+              <li>
+                <a href="#">Eventos que já participei</a>
+              </li>
+              <li>
+                <a href="#">Minhas conexões</a>
+              </li>
+              <li>
+                <a href="#">Minhas avaliações</a>
+              </li>
+              <li>
+                <a href="#">Quem viu meu perfil</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIM DO COMPONENTE COM AS INFORMAÇÕES DA PESSOA USUÁRIA-->
+
+    <div class="col-md-5">
+      <!-- INÍCIO DO COMPONENTE PARA ESCRITA DE COMENTÁRIOS -->
+      <div class="card card-shadow mb-4">
+        <div class="row mt-4 mb-4 mr-2">
+          <div
+            class="col-md-3 d-flex -align-items-center justify-content-center"
+          >
+            <div class="app-user-profile-wrapper">
+              <app-user-profile></app-user-profile>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="publish-section">
+              <app-input-comentario></app-input-comentario>
+              <div class="media-upload-section">
+                <img src="../../assets/img/file-logo.svg" alt="" />
+                <p>Upload de mídia</p>
+              </div>
             </div>
           </div>
         </div>
-      
-    
-      <div class="col-md-4 border">
-        <div class="card mb-4">
-          <div class="card-body">This is some text within a card body.</div>
+      </div>
+      <!-- FIM DO COMPONENTE PARA ESCRITA DE COMENTÁRIOS -->
+
+      <!-- INÍCIO DO COMPONENTE DE PUBLICAÇÃO -->
+      <div class="card card-shadow" style="width: 100%">
+        <div class="card-header">
+          <div class="app-user-profile-wrapper">
+            <app-user-profile></app-user-profile>
+          </div>
+          <div class="card-header-user-info">
+            <h5>Nome do Usuário</h5>
+            <p>Descrição do Usuário</p>
+            <small>7h atrás • <img src="../../assets/img/world.svg" /></small>
+          </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
+        <div class="card-body">
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nisi
+            ea accusantium minus quos consectetur amet harum ad assumenda sint!
+          </p>
+        </div>
+        <div class="card-body-image-area">
+          <!-- IMAGEM DA POSTAGEM AQUI -->
+        </div>
+        <div class="like-comment-area">
+          <div class="like">
+            <img src="../../assets/img/like.svg" alt="botão de curtir" />
+            <span>2</span>
           </div>
-      </div>
-
-
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
+          <span>1 comentário</span>
+        </div>
+        <div class="like-comment-action-area">
+          <div class="like-action-area">
+            <img
+              src="../../assets/img/like-big.svg"
+              alt="botão de ação de curtir"
+            />
+            <span>Gostei</span>
           </div>
+          <div class="comment-action-area">
+            <img
+              src="../../assets/img/twitch-logo.svg"
+              alt="botação de ação de comentar"
+            />
+            <span>Comentar</span>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center flex-nowrap">
+          <div
+            class="col-md-3 d-flex justify-content-center align-items-center"
+          >
+            <app-user-profile></app-user-profile>
+          </div>
+          <div class="col-md-9 mr-2 mt-4">
+            <app-input-comentario></app-input-comentario>
+          </div>
+        </div>
       </div>
+    </div>
+    <!-- FIM DO COMPONENTE DE PUBLICAÇÃO -->
 
-
-
+    <!-- INÍCIO DO COMPONENTE DE NOTÍCIAS -->
+    <div class="col-md-4">
+      <app-noticias></app-noticias>
+    </div>
   </div>
 </div>
