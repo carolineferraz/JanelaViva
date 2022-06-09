@@ -14,6 +14,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { InputComentarioComponent } from './input-comentario/input-comentario.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { FotoUsuarioComponent } from './foto-usuario/foto-usuario.component';
+
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { UsuarioComponent } from './usuario/usuario.component';
     InputComentarioComponent,
     NoticiasComponent,
     UsuarioComponent,
+    FotoUsuarioComponent,
+   
     
   ],
   imports: [
