@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Evento } from '../model/Evento';
 import { EventoService } from '../service/evento.service';
@@ -40,13 +41,8 @@ export class EventoComponent implements OnInit {
       alert('Tema cadastrado com sucesso!')
       this.findAllEventos()
       this.evento=new Evento()
-  
-      
-
-      
-      
-
     })
   }
+
 
 }
