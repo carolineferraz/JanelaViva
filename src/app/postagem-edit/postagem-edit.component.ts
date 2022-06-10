@@ -35,7 +35,7 @@ export class PostagemEditComponent implements OnInit {
 
     let id=this.route.snapshot.params['id']
     this.findByIdPostagem(id)
-    this.findAllEventos
+    // this.findAllEventos()
   }
 
   findByIdPostagem(id: number){
@@ -43,14 +43,14 @@ export class PostagemEditComponent implements OnInit {
       this.postagem=resp
     })
   }
-  findAllEventos(){
-    this.eventoService.getAllEventos().subscribe((resp: Evento[])=>{
-      this.listaEventos=resp
-    })
-  }
+  // findAllEventos(){
+  //   this.eventoService.getAllEventos().subscribe((resp: Evento[])=>{
+  //     this.listaEventos=resp
+  //   })
+  // }
   atualizar(){
-    // this.evento.id=this.idEvento
-    this.postagem.evento=this.evento
+  
+    this.postagem.evento = this.postagem.evento
     
     this.postagemService.putPostagem(this.postagem).subscribe((resp:Postagem)=>{
       this.postagem=resp
