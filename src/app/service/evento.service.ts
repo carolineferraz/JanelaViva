@@ -18,19 +18,19 @@ export class EventoService {
   }
 
   getAllEventos():Observable<Evento[]>{
-    return this.http.get<Evento[]>('https://janelaviva.herokuapp.com/eventos', this.token)    
+    return this.http.get<Evento[]>('https://janela-viva.herokuapp.com/eventos', this.token)    
   }
   getByIdEvento(id: number):Observable<Evento>{
-      return this.http.get<Evento>(`https://janelaviva.herokuapp.com/eventos/${id}`, this.token) 
+      return this.http.get<Evento>(`https://janela-viva.herokuapp.com/eventos/${id}`, this.token) 
   }
   postEvento(evento: Evento):Observable<Evento>{
-    return this.http.post<Evento>('https://janelaviva.herokuapp.com/eventos',evento, this.token) 
+    return this.http.post<Evento>('https://janela-viva.herokuapp.com/eventos',evento, this.token) 
   }
   putEvento(evento: Evento):Observable<Evento>{
-    return this.http.put<Evento>('https://janelaviva.herokuapp.com/eventos',evento, this.token) 
+    return this.http.put<Evento>('https://janela-viva.herokuapp.com/eventos',evento, this.token) 
   }
   deleteEvento(id: number){
-    return this.http.delete(`https://janelaviva.herokuapp.com/eventos/${id}`, this.token) 
+    return this.http.delete(`https://janela-viva.herokuapp.com/eventos/${id}`, this.token) 
   }
-  
+
 }

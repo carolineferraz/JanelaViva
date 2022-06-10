@@ -43,10 +43,9 @@ export class PostagemComponent implements OnInit {
      }
 
      this.authService.refreshToken()
-     this.findByIdEvento()
      this.getAllEventos()
      this.getAllPostagens()
-     this.findByIdUsuario()
+   
 
   }
 
@@ -55,6 +54,7 @@ export class PostagemComponent implements OnInit {
       this.listaPostagens = resp
     })
   }
+  
 
   getAllEventos(){
     this.eventoService.getAllEventos().subscribe((resp: Evento[])=>{
@@ -63,6 +63,7 @@ export class PostagemComponent implements OnInit {
   }
 
   findByIdEvento(){
+    console.log(this.idEvento)
     this.eventoService.getByIdEvento(this.idEvento).subscribe((resp: Evento)=>{
       this.evento = resp
     })

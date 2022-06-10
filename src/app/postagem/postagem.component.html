@@ -21,7 +21,7 @@
   
   
       <div class="col-md-6 d-flex justify-content-center">
-        <img src="../../assets/img/bikeInicio.png" alt="" width="500px" height="500px">
+        
       </div>
     </div>
   
@@ -35,7 +35,7 @@
   
         <a (click)='findByIdUsuario()' class="nav-item nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab" data-toggle="tab" href="#nav-minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas postagens</a>
   
-        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab" href="#nav-postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por Tema</a>
+        <a  class="nav-item nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab" href="#nav-postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por Evento</a>
     
       </div>
     </nav>
@@ -46,7 +46,8 @@
           <div class="card text-center" *ngFor='let item of listaPostagens'>
             <div class="card-body">
               <h5 class="card-title m-0">{{item.descricao}}</h5>
-              <small class="text-muted">Tema: {{item.evento.descricao}}</small>
+              <small class="text-muted">Evento: {{item.evento.titulo}}</small>
+
               <!-- <p class="card-text"><small class="text-muted">
                 {{item.data | date: 'dd/mm/yyyy'}} às {{item.dataAtual | date: 'HH:mm'}}
               </small></p> -->
@@ -64,7 +65,7 @@
           <div class="card text-center" *ngFor='let item of usuario.postagem'>
             <div class="card-body">
               <h5 class="card-title m-0">{{item.descricao}}</h5>
-              <small class="text-muted">Tema: {{item.evento.descricao}}</small>
+              <small class="text-muted">Evento: {{item.evento.titulo}}</small>
               <!-- <p class="card-text"><small class="text-muted">
                 {{item.dataAtual | date: 'dd/mm/yyyy'}} às {{item.dataAtual | date: 'HH:mm'}}
               </small></p> -->
@@ -85,7 +86,7 @@
         <div class="card-columns" *ngFor="let evento of listaEventos">
           <div class="card text-center" *ngFor='let item of evento.postagens'>
             <div class="card-body">
-              <h5 class="card-title m-0">{{item.descricao}}</h5>
+              <h1>AQUIIIII</h1>
               <!-- <p class="card-text"><small class="text-muted">
                 {{item.dataAtual | date: 'dd/mm/yyyy'}} às {{item.dataAtual | date: 'HH:mm'}}
               </small></p> -->
@@ -119,7 +120,7 @@
           </div>
   
           <div class="form-group">
-            <label for="evento">Escolha um Evento ou <a data-dismiss="modal" routerLink="/evento">cadastre um novo</a> : </label>
+            <label for="descricao">Escolha um Evento ou <a data-dismiss="modal" routerLink="/evento">cadastre um novo</a> : </label>
             <select name="evento" id="evento" class="form-control" [(ngModel)]='idEvento' (change)="findByIdEvento()">
   
               <option *ngFor='let item of listaEventos' value="{{item.id}}">

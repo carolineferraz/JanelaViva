@@ -6,6 +6,8 @@ import { EventoDeleteComponent } from './evento-delete/evento-delete.component';
 import { EventoEditComponent } from './evento-edit/evento-edit.component';
 import { EventoComponent } from './evento/evento.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { PostagemDeleteComponent } from './postagem-delete/postagem-delete.component';
+import { PostagemEditComponent } from './postagem-edit/postagem-edit.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { SobreComponent } from './sobre/sobre.component';
 
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'evento', component: EventoComponent},
   {path: 'evento-delete/:id',component:EventoDeleteComponent},
   {path: 'evento-edit/:id',component:EventoEditComponent},
-  {path: 'postagem', component:PostagemComponent}
+  {path: 'postagem', component:PostagemComponent},
+  {path: 'postagem-edit/:id',component:PostagemEditComponent},
+  {path: 'postagem-delete/:id', component:PostagemDeleteComponent}
 ];
 
 @NgModule({

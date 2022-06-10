@@ -6,6 +6,7 @@ export class Usuario {
   idade: number;
   tipo: string;
   email: string;
+  foto: string;
   senha: string;
   habilidades: string;
   avaliacao: number;
