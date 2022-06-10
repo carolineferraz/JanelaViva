@@ -19,16 +19,16 @@ export class PostagemService {
   }
 
   getAllPostagens():Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('https://janelaviva.herokuapp.com/postagens', this.token)    
+    return this.http.get<Postagem[]>('https://janela-viva.herokuapp.com/postagens', this.token)    
   }
   postPostagem(postagem: Postagem):Observable<Postagem>{
-    return this.http.post<Postagem>('https://janelaviva.herokuapp.com/postagens',postagem, this.token) 
+    return this.http.post<Postagem>('https://janela-viva.herokuapp.com/postagens',postagem, this.token) 
   }
   putPostagem(postagem: Postagem):Observable<Postagem>{
-    return this.http.put<Postagem>('https://janelaviva.herokuapp.com/postagens',postagem, this.token) 
+    return this.http.put<Postagem>('https://janela-viva.herokuapp.com/postagens',postagem, this.token) 
   }
   deletePostagem(id: number){
-    return this.http.delete(`https://janelaviva.herokuapp.com/postagens/${id}`, this.token) 
+    return this.http.delete(`https://janela-viva.herokuapp.com/postagens/${id}`, this.token) 
   }
 
 }

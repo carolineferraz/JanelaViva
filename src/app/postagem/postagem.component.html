@@ -35,7 +35,7 @@
   
         <a (click)='findByIdUsuario()' class="nav-item nav-link text-secondary font-weight-bold" id="nav-minhasPostagens-tab" data-toggle="tab" href="#nav-minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas postagens</a>
   
-        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab" href="#nav-postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por Tema</a>
+        <a  class="nav-item nav-link text-secondary font-weight-bold" id="nav-postagemTema-tab" data-toggle="tab" href="#nav-postagemTema" role="tab" aria-controls="nav-postagemTema" aria-selected="false">Postagens por Evento</a>
     
       </div>
     </nav>
@@ -64,7 +64,7 @@
           <div class="card text-center" *ngFor='let item of usuario.postagem'>
             <div class="card-body">
               <h5 class="card-title m-0">{{item.descricao}}</h5>
-              <small class="text-muted">Tema: {{item.evento.descricao}}</small>
+              <small class="text-muted">Evento: {{item.evento.descricao}}</small>
               <!-- <p class="card-text"><small class="text-muted">
                 {{item.dataAtual | date: 'dd/mm/yyyy'}} às {{item.dataAtual | date: 'HH:mm'}}
               </small></p> -->

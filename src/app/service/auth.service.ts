@@ -23,14 +23,14 @@ export class AuthService {
   }
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
-    return this.http.post<UsuarioLogin>("https://janelaviva.herokuapp.com/usuarios/logar", usuarioLogin);
+    return this.http.post<UsuarioLogin>("https://janela-viva.herokuapp.com/usuarios/logar", usuarioLogin);
   }
 
   cadastrar(usuario: Usuario) {
-    return this.http.post<Usuario>("https://janelaviva.herokuapp.com/usuarios/cadastrar", usuario);
+    return this.http.post<Usuario>("https://janela-viva.herokuapp.com/usuarios/cadastrar", usuario);
   }
   getByIdUsuario(id: number):Observable<Usuario>{
-    return this.http.get<Usuario>(`https://janelaviva.herokuapp.com/usuarios/${id}`,this.token)
+    return this.http.get<Usuario>(`https://janela-viva.herokuapp.com/usuarios/${id}`,this.token)
   }
   logado() {
     let ok:boolean=false 

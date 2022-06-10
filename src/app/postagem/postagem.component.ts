@@ -46,7 +46,7 @@ export class PostagemComponent implements OnInit {
      this.findByIdEvento()
      this.getAllEventos()
      this.getAllPostagens()
-     this.findByIdUsuario()
+   
 
   }
 
