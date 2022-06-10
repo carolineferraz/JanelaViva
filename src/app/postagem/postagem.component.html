@@ -86,7 +86,8 @@
         <div class="card-columns" *ngFor="let evento of listaEventos">
           <div class="card text-center" *ngFor='let item of evento.postagens'>
             <div class="card-body">
-              <h1>AQUIIIII</h1>
+              <h1>{{item.descricao}}</h1>
+              <p>{{evento.titulo}}</p>
               <!-- <p class="card-text"><small class="text-muted">
                 {{item.dataAtual | date: 'dd/mm/yyyy'}} às {{item.dataAtual | date: 'HH:mm'}}
               </small></p> -->
