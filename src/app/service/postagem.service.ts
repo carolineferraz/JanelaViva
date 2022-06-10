@@ -21,6 +21,10 @@ export class PostagemService {
   getAllPostagens():Observable<Postagem[]>{
     return this.http.get<Postagem[]>('https://janela-viva.herokuapp.com/postagens', this.token)    
   }
+  getByIdPostagem(id: number):Observable<Postagem>{
+    return this.http.get<Postagem>(`https://janela-viva.herokuapp.com/postagens/${id}`, this.token)    
+  }
+
   postPostagem(postagem: Postagem):Observable<Postagem>{
     return this.http.post<Postagem>('https://janela-viva.herokuapp.com/postagens',postagem, this.token) 
   }

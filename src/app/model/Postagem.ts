@@ -2,9 +2,10 @@ import { Evento } from "./Evento";
 import { Usuario } from "./Usuario";
 
 export class Postagem {
-  public id: number;
-  public descricao: string;
-  public curtidas: number;
-  public evento: Evento;
-  public usuario: Usuario;
+  id: number;
+  descricao: string;
+  foto: string;
+  curtidas: number;
+  evento: Evento;
+  usuario: Usuario;
 }

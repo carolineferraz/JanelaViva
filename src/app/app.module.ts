@@ -19,6 +19,8 @@ import { EventoComponent } from './evento/evento.component';
 import { EventoDeleteComponent } from './evento-delete/evento-delete.component';
 import { EventoEditComponent } from './evento-edit/evento-edit.component';
 import { PostagemComponent } from './postagem/postagem.component';
+import { PostagemEditComponent } from './postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './postagem-delete/postagem-delete.component';
 
 
 
@@ -38,7 +40,9 @@ import { PostagemComponent } from './postagem/postagem.component';
     EventoComponent,
     EventoDeleteComponent,
     EventoEditComponent,
-    PostagemComponent
+    PostagemComponent,
+    PostagemEditComponent,
+    PostagemDeleteComponent
 
   ],
   imports: [
