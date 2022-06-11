@@ -13,34 +13,34 @@ import { PostagemService } from '../service/postagem.service';
 })
 export class PostagemEditComponent implements OnInit {
 
-  postagem: Postagem=new Postagem()
-  evento: Evento=new Evento()
+  postagem: Postagem = new Postagem()
+  evento: Evento = new Evento()
   listaEventos: Evento[]
   idEvento: number
 
   constructor(
-    private router:Router,
-    private route:ActivatedRoute,
+    private router: Router,
+    private route: ActivatedRoute,
     private postagemService: PostagemService,
     private eventoService: EventoService
 
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
 
-    if(environment.token==''){
+    if (environment.token == '') {
       this.router.navigate(['/postagem'])
     }
 
-    let id=this.route.snapshot.params['id']
+    let id = this.route.snapshot.params['id']
     this.findByIdPostagem(id)
     // this.findAllEventos()
   }
 
-  findByIdPostagem(id: number){
-    this.postagemService.getByIdPostagem(id).subscribe((resp:Postagem)=>{
-      this.postagem=resp
+  findByIdPostagem(id: number) {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+      this.postagem = resp
     })
   }
   // findAllEventos(){
@@ -48,15 +48,15 @@ export class PostagemEditComponent implements OnInit {
   //     this.listaEventos=resp
   //   })
   // }
-  atualizar(){
-  
+  atualizar() {
+
     this.postagem.evento = this.postagem.evento
-    
-    this.postagemService.putPostagem(this.postagem).subscribe((resp:Postagem)=>{
-      this.postagem=resp
+
+    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
       alert('Postagem atualizada com sucesso!')
 
-      this.router.navigate(['/postagem'])
+      this.router.navigate(['/usuario-postagens'])
     })
   }
   // findByIdEvento(){

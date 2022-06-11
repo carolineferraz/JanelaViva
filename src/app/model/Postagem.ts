@@ -8,4 +8,5 @@ export class Postagem {
   curtidas: number;
   evento: Evento;
   usuario: Usuario;
+  data: Date;
 }

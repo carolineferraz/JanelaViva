@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Todas as Postagens do Evento: {{ evento.titulo }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor="let postagem of evento.postagens">
+        <div class="card card-shadow mb-2" style="width: 100%">
+          <div class="card-header">
+            <div class="app-user-profile-wrapper">
+              <div class="user-profile-picture-border normal-size">
+                <div>
+                  <img src="{{ postagem.usuario.foto }}" alt="foto usuario" />
+                </div>
+              </div>
+            </div>
+            <div class="card-header-user-info">
+              <h5>{{ postagem.usuario.nome }}</h5>
+              <p>Descrição do Usuário</p>
+              <small>7h atrás • <img src="../../assets/img/world.svg" /></small>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nisi
+              ea accusantium minus quos consectetur amet harum ad assumenda
+              sint!
+            </p>
+          </div>
+          <div class="card-body-image-area">
+            <!-- IMAGEM DA POSTAGEM AQUI -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
