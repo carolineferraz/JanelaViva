@@ -36,48 +36,48 @@ export class PostagemComponent implements OnInit {
   ) { }
 
 
-  ngOnInit(){
+  ngOnInit() {
 
-    if(environment.token == ''){
+    if (environment.token == '') {
       this.router.navigate(['/entrar'])
-     }
+    }
 
-     this.authService.refreshToken()
-     this.getAllEventos()
-     this.getAllPostagens()
-   
+    this.authService.refreshToken()
+    this.getAllEventos()
+    this.getAllPostagens()
+
 
   }
 
-  getAllPostagens(){
-    this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
-      this.listaPostagens = resp
+  getAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+      this.postagemService.postagens = resp;
     })
   }
-  
 
-  getAllEventos(){
-    this.eventoService.getAllEventos().subscribe((resp: Evento[])=>{
+
+  getAllEventos() {
+    this.eventoService.getAllEventos().subscribe((resp: Evento[]) => {
       this.listaEventos = resp
     })
   }
 
-  findByIdEvento(){
+  findByIdEvento() {
     console.log(this.idEvento)
-    this.eventoService.getByIdEvento(this.idEvento).subscribe((resp: Evento)=>{
+    this.eventoService.getByIdEvento(this.idEvento).subscribe((resp: Evento) => {
       this.evento = resp
     })
   }
 
-  findByIdUsuario(){
-    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+  findByIdUsuario() {
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario) => {
       this.usuario = resp
     })
   }
 
-  publicar(){
+  publicar() {
     console.log(this.evento)
-    
+
     this.evento.id = this.idEvento
     this.postagem.evento = this.evento
 
@@ -85,7 +85,7 @@ export class PostagemComponent implements OnInit {
     this.postagem.usuario = this.usuarioPost
     console.log(this.postagem)
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       console.log(resp)
       this.postagem = resp
       alert('Postagem realizada com sucesso!')

@@ -13,12 +13,13 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) { }
-  token={
-    headers:new HttpHeaders().set('Authorization',environment.token)
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
-  refreshToken(){
-    this.token={
-      headers: new HttpHeaders().set('Authorization',environment.token),
+  refreshToken() {
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token),
     };
   }
 
@@ -29,13 +30,14 @@ export class AuthService {
   cadastrar(usuario: Usuario) {
     return this.http.post<Usuario>("https://janela-viva.herokuapp.com/usuarios/cadastrar", usuario);
   }
-  getByIdUsuario(id: number):Observable<Usuario>{
-    return this.http.get<Usuario>(`https://janela-viva.herokuapp.com/usuarios/${id}`,this.token)
+  getByIdUsuario(id: number): Observable<Usuario> {
+    return this.http.get<Usuario>(`https://janela-viva.herokuapp.com/usuarios/${id}`, this.token)
   }
+
   logado() {
-    let ok:boolean=false 
-    if (environment.token !== ""){
-      ok=true
+    let ok: boolean = false
+    if (environment.token !== "") {
+      ok = true
     }
     return ok
   }

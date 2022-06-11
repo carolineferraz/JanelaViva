@@ -1,20 +1,12 @@
-<div id="bg-img" class="cadastrar-container">
-  <div class="row d-flex justify-content-center" style="width: 1500px">
-    <div class="col-md-8 form-area font-cadastrar">
-      <div class="row grid">
-        <div class="col-md-8 janela-viva">
-          <img src="../../assets/img/logo.svg" alt="" />
-        </div>
-        <div class="col-md-4 icone">
-          <p><i class="fa fa-times fs-18" aria-hidden="true"></i></p>
-        </div>
-      </div>
-      <h1>Cadastre-se</h1>
+<div class="container-fluid">
+  <div class="row card-shadow atualizar-card">
+    <div class="form-area font-cadastrar">
+      <h1>Atualizar Informações</h1>
       <form>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label for=""></label>
+              <label for="nome">Digite seu nome:</label>
               <input
                 [(ngModel)]="usuario.nome"
                 name="nome"
@@ -24,41 +16,31 @@
               />
             </div>
             <div class="form-group">
-              <label for=""></label>
+              <label for="">Email:</label>
               <input
                 [(ngModel)]="usuario.email"
                 name="email"
                 type="email"
                 class="form-control border border-warning border-r"
                 placeholder="Digite seu email"
+                disabled
               />
             </div>
             <div class="form-group">
-              <label for=""></label>
-              <input
-                [(ngModel)]="usuario.idade"
-                name="idade"
-                type="text"
-                class="form-control border border-warning border-r"
-                placeholder="Digite sua idade (se Voluntario)"
-              />
-            </div>
-            <div class="form-group">
-              <label for=""></label>
+              <label for="">Foto de Perfil:</label>
               <input
                 [(ngModel)]="usuario.foto"
                 name="idade"
                 type="text"
                 class="form-control border border-warning border-r"
-                placeholder="link da imagem"
+                placeholder="Link da imagem"
               />
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for=""></label>
+              <label for="">Nova senha:</label>
               <input
-                (input)="confirmSenha($event)"
                 name="senha"
                 type="password"
                 class="form-control border border-warning border-r"
@@ -66,8 +48,9 @@
               />
             </div>
             <div class="form-group">
-              <label for=""></label>
+              <label for="comfirmarSenha">Confirmar nova senha:</label>
               <input
+                (input)="confirmSenha($event)"
                 [(ngModel)]="usuario.senha"
                 name="confirmarSenha"
                 type="password"
@@ -75,18 +58,19 @@
                 placeholder="Confirmar senha"
               />
             </div>
+            <div class="form-group"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
             <div class="form-group">
-              <label for=""></label>
-              <select
-                class="form-control border border-warning border-r cor-select"
-                name="tipo"
-                id="tipo"
-                (change)="typeUser($event)"
-              >
-                <option>Selecione um tipo de usuário:</option>
-                <option value="vol">Voluntário</option>
-                <option value="adm">Administrador</option>
-              </select>
+              <label for="habilidades">Liste suas habilidades:</label>
+              <input
+                [(ngModel)]="usuario.habilidades"
+                name="habilidades"
+                type="text"
+                class="form-control border border-r"
+              />
             </div>
           </div>
         </div>
@@ -95,9 +79,9 @@
           <button
             type="submit"
             class="btn btn-warning btn-lg btn-block btn-cad"
-            (click)="cadastrar()"
+            (click)="atualizar()"
           >
-            Cadastrar
+            Atualizar
           </button>
         </div>
       </form>

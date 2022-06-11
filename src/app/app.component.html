@@ -2,4 +2,20 @@
 <router-outlet></router-outlet>
 <app-sobre></app-sobre>
 <app-rodape></app-rodape> -->
-<router-outlet></router-outlet> 
+<!-- <router-outlet></router-outlet>  -->
+<div class="{{ authService.logado() ? '' : 'd-none' }}">
+  <app-menu-logado></app-menu-logado>
+</div>
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-md-3" *ngIf="authService.logado()">
+      <app-usuario></app-usuario>
+    </div>
+    <div class="{{ authService.logado() ? 'col-md-5' : 'w-100' }}">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-4" *ngIf="authService.logado()">
+      <app-noticias></app-noticias>
+    </div>
+  </div>
+</div>

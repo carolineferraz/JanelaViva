@@ -14,33 +14,43 @@ export class EventoComponent implements OnInit {
 
   evento: Evento = new Evento()
   listaEventos: Evento[]
+  listaEventosUsuario: Evento[];
 
   constructor(
     private router: Router,
     private eventoService: EventoService
   ) { }
 
-  ngOnInit(){
-    if(environment.token==''){
+  ngOnInit() {
+    if (environment.token == '') {
       alert('Sua seção expirou, faça o login novamente.')
       this.router.navigate(['/entrar'])
     }
 
     this.findAllEventos()
   }
-  findAllEventos(){
-    this.eventoService.getAllEventos().subscribe((resp: Evento[])=>{
-      this.listaEventos=resp
+
+  findAllEventos() {
+    this.eventoService.getAllEventos().subscribe((resp: Evento[]) => {
+      this.listaEventos = resp
     })
   }
 
-  cadastrar(){
+  cadastrar() {
     console.log(this.evento)
-    this.eventoService.postEvento(this.evento).subscribe((resp: Evento)=>{
-      this.evento=resp
+    this.eventoService.postEvento(this.evento).subscribe((resp: Evento) => {
+      this.evento = resp
       alert('Tema cadastrado com sucesso!')
       this.findAllEventos()
-      this.evento=new Evento()
+      this.evento = new Evento()
+    })
+  }
+
+  checaPostagensDeUsuario() {
+    this.listaEventosUsuario = this.listaEventos.filter((e, i) => {
+      e.postagens.filter((p, i) => {
+        p.usuario.id === environment.id
+      })
     })
   }
 

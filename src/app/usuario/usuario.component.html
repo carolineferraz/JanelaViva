@@ -1,0 +1,42 @@
+<div class="card card-shadow">
+  <div class="usuario-card-header">
+    <div class="user-profile-picture-border normal-size">
+      <img src="{{ usuarioService.usuario.foto }}" alt="foto de usuário" />
+    </div>
+  </div>
+  <div class="card-body card-align-center">
+    <h5 class="card-title">{{ usuarioService.usuario.nome }}</h5>
+    <div class="star-section">
+      <img src="../../assets//img/star-full.svg" alt="estrela cheia" />
+      <img src="../../assets//img/star-full.svg" alt="estrela cheia" />
+      <img src="../../assets//img/star-full.svg" alt="estrela cheia" />
+      <img src="../../assets//img/star-empty.svg" alt="estrela vazia" />
+      <img src="../../assets//img/star-empty.svg" alt="estrela cheia" />
+    </div>
+    <div class="description-section d-flex flex-wrap">
+      <div *ngFor="let habilidade of habilidades" class="p-1">
+        <p class="habilidade">{{ habilidade }}</p>
+      </div>
+    </div>
+
+    <div class="event-section">
+      <ul>
+        <li>
+          <a routerLink="/usuario-postagens">Minhas postagens</a>
+        </li>
+        <li>
+          <a href="#">Participantes</a>
+        </li>
+      </ul>
+    </div>
+    <div class="event-history-section">
+      <ul>
+        <li>
+          <a [routerLink]="['/usuario-edit', usuarioService.usuario.id]"
+            >Editar meu Perfil</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

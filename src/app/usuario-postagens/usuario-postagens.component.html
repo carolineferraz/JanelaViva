@@ -1,0 +1,34 @@
+<div>
+  <h1>Olá, {{ nomeUsuario }}!</h1>
+  <h2>Essas são suas últimas postagens:</h2>
+</div>
+
+<div *ngFor="let postagem of postagens">
+  <div class="card card-shadow mb-3">
+    <div class="card-body-image-area">
+      <img src="{{ postagem.foto }}" alt="foto postagem" />
+    </div>
+    <div class="card-postagem-body">
+      <h4>{{ postagem.descricao }}</h4>
+      <p class="card-postagem-body-texto-evento">
+        {{ postagem.evento.titulo }}
+      </p>
+      <small>Data: {{ postagem.data | date: "dd/MM/yyyy" }}</small>
+      <small>{{ postagem.usuario.nome }}</small>
+    </div>
+    <div class="edit-delete-section">
+      <button
+        class="btn btn-info"
+        [routerLink]="['/postagem-edit', postagem.id]"
+      >
+        Editar
+      </button>
+      <button
+        class="btn btn-danger"
+        [routerLink]="['/postagem-delete', postagem.id]"
+      >
+        Excluir
+      </button>
+    </div>
+  </div>
+</div>
