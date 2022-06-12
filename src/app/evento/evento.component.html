@@ -1,12 +1,13 @@
-<div class="container-fluid">
+<div class="container-fluid mt-0">
   <a routerLink="/inicio" class="text-white text-left">
     <i class="fa fa-angle-double-left" aria-hidden="true">Início</i>
   </a>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 mt-0">
       <div class="card card-shadow">
         <div class="row d-flex justify-content-center mt-4 mb-5">
           <div class="col-md-12">
+            <h2 class="text-center">Criar um Evento</h2>
             <div class="form-group m-3">
               <label for="titulo">Título:</label>
               <input
@@ -48,7 +49,7 @@
               />
             </div>
             <div class="d-flex">
-              <button class="w-100 m-3 btn-criar" (click)="cadastrar()">
+              <button class="w-100 mt-3 mr-3 ml-3 btn-criar" (click)="cadastrar()">
                 Criar
               </button>
             </div>
@@ -61,7 +62,7 @@
 
 <div class="container">
   <div class="row mt-5">
-    <div class="col-md-12">
+    <div class="col-md-12 outros-eventos m-3 p-3">
       <h2 class="text-center">Outros Eventos</h2>
     </div>
   </div>
@@ -72,23 +73,23 @@
         <div class="evento-image-container mb-4">
           <img src="{{ evento.imagem }}" alt="imagem evento" />
         </div>
-        <div class="evento-body mt-3">
+        <div class="evento-body mt-3 p-3">
           <h4>
             {{ evento.titulo }}
           </h4>
-          <p>{{ evento.descricao }}</p>
-          <small>Data: {{ evento.data | date: "dd/MM/yyyy" }}</small>
+          <p class="mt-3">{{ evento.descricao }}</p>
+          <small class="align-self-start pb-0 mb-0">Data: {{ evento.data | date: "dd/MM/yyyy" }}</small>
         </div>
-        <div class="ver-mais-section">
+        <div class="ver-mais-section mb-0 p-3">
           <button
-            class="btn btn-outline-warning btn-ver-post"
+            class="btn btn-ver-post"
             [routerLink]="['/evento-postagens', evento.id]"
           >
             <span>Ver Postagens</span>
           </button>
         </div>
 
-        <div class="edit-delete-section">
+        <div class="edit-delete-section justify-content-between mt-0 pl-3 pr-3 pb-3 pt-0">
           <button
             class="btn btn-outline-warning btn-editar-post"
             [routerLink]="['/evento-edit', evento.id]"

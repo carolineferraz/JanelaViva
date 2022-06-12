@@ -1,3 +1,9 @@
+h2 {
+  color: var(--color-yellow);
+  font-weight: 800;
+  font-size:xx-large;
+}
+
 .card-shadow {
   box-shadow: 5px 7px 11px rgba(0, 0, 0, 0.25);
   border: 3px solid var(--color-yellow);
@@ -49,4 +55,31 @@
 .btn-cad {
   color: var(--color-white);
   border-radius: 15px;
+}
+
+.btn-nao {
+  background-color: var(--color-yellow);
+  width: 45%;
+}
+
+.btn-nao:hover {
+  background-color: #e2a60e;
+}
+
+.btn-nao span {
+  font-weight: 600;
+  color: white;
+}
+
+.btn-sim {
+  width: 45%;
+}
+
+.btn-sim span {
+  color: var(--color-yellow);
+  font-weight: 600;
+}
+
+.btn-sim span:hover {
+  color: white;
 }

@@ -7,6 +7,12 @@ input, textarea {
   padding: 0.3rem 1rem;
 }
 
+h2 {
+  color: var(--color-yellow);
+  font-weight: 800;
+  font-size:xx-large;
+}
+
 #foto{
   height: 30px;
 }
