@@ -7,4 +7,5 @@ export class UsuarioLogin {
   avaliacao: number;
   habilidades: string;
   token: string;
+  tipo: string;
 }

@@ -26,11 +26,13 @@ export class EntrarComponent implements OnInit {
     this.authService.entrar(this.usuarioLogin).subscribe({
       next: ((res: UsuarioLogin) => {
         this.usuarioLogin = res;
+
         environment.token = this.usuarioLogin.token;
         environment.id = this.usuarioLogin.id;
         environment.nome = this.usuarioLogin.nome;
         environment.avaliacao = this.usuarioLogin.avaliacao;
         environment.habilidades = this.usuarioLogin.habilidades;
+        environment.tipo = this.usuarioLogin.tipo;
 
         this.router.navigate(['/inicio'])
       }),
