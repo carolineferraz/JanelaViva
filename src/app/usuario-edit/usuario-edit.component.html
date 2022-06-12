@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="row card-shadow atualizar-card">
-    <div class="form-area font-cadastrar">
-      <h1>Atualizar Informações</h1>
+    <div class="form-area font-cadastrar p-3">
+      <h1 class="mb-4">Atualizar Informações</h1>
       <form>
         <div class="row">
           <div class="col-md-6">
-            <div class="form-group">
-              <label for="nome">Digite seu nome:</label>
+            <div class="form-group text-start">
+              <label class="text-start" for="nome">Digite seu nome:</label>
               <input
                 [(ngModel)]="usuario.nome"
                 name="nome"
@@ -69,13 +69,13 @@
                 [(ngModel)]="usuario.habilidades"
                 name="habilidades"
                 type="text"
-                class="form-control border border-r"
+                class="form-control border border-warning border-r"
               />
             </div>
           </div>
         </div>
 
-        <div class="d-flex justify-content-around pb-5">
+        <div class="d-flex justify-content-around">
           <button
             type="submit"
             class="btn btn-warning btn-lg btn-block btn-cad"
