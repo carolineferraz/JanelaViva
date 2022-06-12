@@ -89,7 +89,14 @@
           </button>
         </div>
 
+
         <div class="edit-delete-section justify-content-between mt-0 pl-3 pr-3 pb-3 pt-0">
+
+        <div
+          class="edit-delete-section"
+          *ngIf="checaPossibilidadeAlteracaoEvento(evento.id)"
+        >
+
           <button
             class="btn btn-outline-warning btn-editar-post"
             [routerLink]="['/evento-edit', evento.id]"
