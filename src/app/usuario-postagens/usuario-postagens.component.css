@@ -58,6 +58,7 @@ small {
 
 .btn-editar {
   background-color: #FFC32D;
+  width: 45%;
 }
 
 .btn-editar:hover {
@@ -71,6 +72,10 @@ small {
 
 .btn-editar span:hover {
   color: #e7e7e7;
+}
+
+.btn-excluir {
+  width: 45%;
 }
 
 .btn-excluir span {

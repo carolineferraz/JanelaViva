@@ -16,7 +16,7 @@
       <small>Data: {{ postagem.data | date: "dd/MM/yyyy" }}</small>
       <small>{{ postagem.usuario.nome }}</small>
     </div>
-    <div class="edit-delete-section p-3">
+    <div class="edit-delete-section mb-2 p-3">
       <button
         class="btn btn-editar"
         [routerLink]="['/postagem-edit', postagem.id]"

@@ -42,6 +42,10 @@
   font-weight: 800;
 }
 
+.form-area .btn-main:hover {
+  background-color: #e2a60e;
+}
+
 .form-area input {
   border: 1px solid var(--color-yellow);
   border-radius: 12px;
@@ -89,3 +93,4 @@ span {
 h1 {
   font-weight: 700;
 }
+
