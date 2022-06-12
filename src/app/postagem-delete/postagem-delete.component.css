@@ -1,0 +1,35 @@
+.card-shadow {
+  box-shadow: 5px 7px 11px rgba(0, 0, 0, 0.25);
+  border: 3px solid var(--color-yellow);
+  border-radius: 1.25rem;
+}
+
+.atualizar-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-area {
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.form-area input::placeholder {
+  color: var(--color-yellow);
+}
+
+.container-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font-cadastrar {
+  color: var(--color-yellow);
+}
+
+.control-label {
+  display: inline-block;
+  text-align: left;
+}

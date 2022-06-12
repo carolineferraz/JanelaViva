@@ -28,6 +28,7 @@ export class EventoEditComponent implements OnInit {
     }
     let id = this.route.snapshot.params['id']
     this.findByIdEvento(id)
+    console.log(this.evento)
 
   }
 
