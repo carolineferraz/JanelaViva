@@ -18,19 +18,17 @@
             </div>
             <div class="card-header-user-info">
               <h5>{{ postagem.usuario.nome }}</h5>
-              <p>Descrição do Usuário</p>
-              <small>7h atrás • <img src="../../assets/img/world.svg" /></small>
+              <small
+                >{{ postagem.data | date: "dd/MM/yyyy" }} •
+                <img src="../../assets/img/world.svg"
+              /></small>
             </div>
           </div>
           <div class="card-body">
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nisi
-              ea accusantium minus quos consectetur amet harum ad assumenda
-              sint!
-            </p>
+            <p class="card-text">{{ postagem.descricao }}</p>
           </div>
           <div class="card-body-image-area">
-            <!-- IMAGEM DA POSTAGEM AQUI -->
+            <img src="{{ postagem.foto }}" alt="foto postagem" />
           </div>
         </div>
       </div>
