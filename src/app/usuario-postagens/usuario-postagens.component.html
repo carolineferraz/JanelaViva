@@ -18,16 +18,16 @@
     </div>
     <div class="edit-delete-section">
       <button
-        class="btn btn-info"
+        class="btn btn-editar"
         [routerLink]="['/postagem-edit', postagem.id]"
       >
-        Editar
+        <span>Editar</span>
       </button>
       <button
-        class="btn btn-danger"
+        class="btn btn-excluir btn-light btn-outline-warning"
         [routerLink]="['/postagem-delete', postagem.id]"
       >
-        Excluir
+        <span>Excluir</span>
       </button>
     </div>
   </div>

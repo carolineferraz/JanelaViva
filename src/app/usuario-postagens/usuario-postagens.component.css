@@ -28,3 +28,30 @@
   justify-content: space-around;
   padding: 2rem;
 }
+
+.btn-editar {
+  background-color: #FFC32D;
+}
+
+.btn-editar:hover {
+  background-color: #e2a60e;
+}
+
+.btn-editar span {
+  color: white;
+  font-weight: 600;
+}
+
+.btn-editar span:hover {
+  color: #e7e7e7;
+}
+
+.btn-excluir span {
+  font-weight: 600;
+  color: #FFC32D;
+}
+
+.btn-excluir span:hover {
+  color: white;
+}
+
