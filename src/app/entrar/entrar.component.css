@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 .login-container {
   display: flex;
   align-items: center;
@@ -20,14 +22,13 @@
 .form-area {
   width: 300px;
   height: 300px;
-  border: 1px solid var(--color-yellow);
-  background-color: rgba(209, 213, 213, 0.7);
+  /* border: 1px solid var(--color-yellow); */
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
 }
 
 .form-area h1 {
   text-transform: uppercase;
-  text-size: 30px;
   color: var(--color-yellow);
 }
 
@@ -35,13 +36,18 @@
   background-color: var(--color-yellow);
   color: var(--color-white);
   width: 100%;
-  border-radius: 15px;
+  border-radius: 12px;
   text-transform: uppercase;
   font-weight: 800;
 }
 
+.form-area .btn-main:hover {
+  background-color: #e2a60e;
+}
+
 .form-area input {
   border: 1px solid var(--color-yellow);
+  border-radius: 12px;
 }
 
 .form-area input::placeholder {
@@ -57,8 +63,8 @@
 
 .container-right p {
   color: var(--color-white);
-  font-weight: 800;
-  font-size: 33px;
+  font-weight: 700;
+  font-size: 38px;
 }
 
 #bg-img {
@@ -67,8 +73,23 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+  margin: 0;
 }
 
 .link-entrar {
   color: var(--color-yellow);
 }
+
+p {
+  margin: 0;
+  line-height: 2.6rem;
+}
+
+span {
+  font-weight: 900;
+}
+
+h1 {
+  font-weight: 700;
+}
+

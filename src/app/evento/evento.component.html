@@ -81,10 +81,10 @@
         </div>
         <div class="ver-mais-section">
           <button
-            class="btn btn-info"
+            class="btn btn-outline-warning btn-ver-post"
             [routerLink]="['/evento-postagens', evento.id]"
           >
-            Ver Postagens
+            <span>Ver Postagens</span>
           </button>
         </div>
 
@@ -93,16 +93,16 @@
           *ngIf="checaPossibilidadeAlteracaoEvento(evento.id)"
         >
           <button
-            class="btn btn-info"
+            class="btn btn-outline-warning btn-editar-post"
             [routerLink]="['/evento-edit', evento.id]"
           >
-            Editar
+            <span>Editar</span>
           </button>
           <button
-            class="btn btn-danger"
+            class="btn btn-outline-warning btn-excluir-post"
             [routerLink]="['/evento-delete', evento.id]"
           >
-            Excluir
+            <span>Excluir</span>
           </button>
         </div>
       </div>

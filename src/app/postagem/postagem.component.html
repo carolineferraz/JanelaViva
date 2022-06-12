@@ -1,23 +1,26 @@
 <div class="form-group">
-  <input
+  <label for="descricao">Digite aqui o texto da sua publicação:</label>
+  <textarea
     [(ngModel)]="postagem.descricao"
     type="text"
     class="form-control input-postagem"
     id="descricao"
-    placeholder="Descrição da publicação"
-  />
+    placeholder="Informações relevantes sobre os eventos e demandas necessárias!"
+  ></textarea>
 </div>
 <div class="form-group">
+  <label for="foto">Insira aqui o link da imagem:</label>
   <input
     type="text"
     [(ngModel)]="postagem.foto"
     class="form-control"
     id="foto"
-    placeholder="Insira link da imagem"
+    placeholder="url-da-imagem"
   />
 </div>
 
 <div class="form-group">
+  <label for="evento">Informe para qual evento a publicação se refere:</label>
   <select
     name="evento"
     id="evento"
