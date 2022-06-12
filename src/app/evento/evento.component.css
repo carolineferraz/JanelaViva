@@ -45,7 +45,7 @@ button.btn-criar {
 }
 
 .evento-body {
-  dispaly: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -66,4 +66,29 @@ button.btn-criar {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
+}
+
+label {
+  color: var(--color-yellow);
+}
+
+.btn-ver-post {
+  background-color: #FFC32D;
+  width: 100%;
+}
+
+.btn-ver-post span {
+  color: white;
+}
+
+.btn-ver-post:hover {
+  background-color: #e2a60e;
+}
+
+.btn-editar-post {
+  
+}
+
+.btn-excluir-post {
+  
 }

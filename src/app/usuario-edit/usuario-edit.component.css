@@ -6,8 +6,8 @@
 
 .atualizar-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  /* align-items: center; */
 }
 
 .form-area {
@@ -20,8 +20,8 @@
 
 .container-left {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  /* align-items: center; */
 }
 
 .font-cadastrar {
@@ -55,4 +55,12 @@
 .btn-cad {
   color: var(--color-white);
   border-radius: 15px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+button {
+  background-color: var(--color-yellow);
 }
