@@ -88,7 +88,10 @@
           </button>
         </div>
 
-        <div class="edit-delete-section">
+        <div
+          class="edit-delete-section"
+          *ngIf="checaPossibilidadeAlteracaoEvento(evento.id)"
+        >
           <button
             class="btn btn-outline-warning btn-editar-post"
             [routerLink]="['/evento-edit', evento.id]"
