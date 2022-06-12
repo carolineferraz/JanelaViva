@@ -1,6 +1,6 @@
-<div>
-  <h1>Olá, {{ nomeUsuario }}!</h1>
-  <h2>Essas são suas últimas postagens:</h2>
+<div class="card card-shadow mb-3 p-3">
+  <h1 class="text-center">Olá, {{ nomeUsuario }}!</h1>
+  <h2 class="mt-3 mb-3">Essas são suas últimas postagens:</h2>
 </div>
 
 <div *ngFor="let postagem of postagens">
@@ -9,14 +9,14 @@
       <img src="{{ postagem.foto }}" alt="foto postagem" />
     </div>
     <div class="card-postagem-body">
-      <h4>{{ postagem.descricao }}</h4>
-      <p class="card-postagem-body-texto-evento">
+      <h4 class="p-descricao">{{ postagem.descricao }}</h4>
+      <h4 class="p-evento card-postagem-body-texto-evento mt-4">Evento: 
         {{ postagem.evento.titulo }}
-      </p>
+      </h4>
       <small>Data: {{ postagem.data | date: "dd/MM/yyyy" }}</small>
       <small>{{ postagem.usuario.nome }}</small>
     </div>
-    <div class="edit-delete-section">
+    <div class="edit-delete-section p-3">
       <button
         class="btn btn-editar"
         [routerLink]="['/postagem-edit', postagem.id]"
