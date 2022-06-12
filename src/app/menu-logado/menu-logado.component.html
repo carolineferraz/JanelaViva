@@ -1,12 +1,14 @@
 <nav class="menu-logado">
-  <div class="logo-area" routerLink="/inicio">
+
+
+  <!-- <div class="logo-area" routerLink="/inicio">
     <img
       src="../../assets/img/logo-branco.svg"
       alt="logo"
       width="200px"
       height="36px"
     />
-  </div>
+  </div> 
  
   <div class="options-area">
     <div class="option" routerLink="/inicio">
@@ -19,7 +21,68 @@
       <img src="../../assets/img/sair.png" alt="Ícone sair da conta" width="35px">
     </div>
     <div></div>
-  </div>
+  </div> -->
+
+
+
+  <!-- menu importado -->
+
+  <nav class="menu-logado navbar navbar-expand-lg navbar-light nav-bg d-flex justify-content-between">
+    <a class="navbar-brand ml-3" routerLink="/inicio"><img class="logo" src="../../assets/img/logo-branca.svg" alt="logo Janela Viva"></a>
+    
+    <form class="form-inline my-2 my-lg-0 ml-3">
+        <input class="form-control mr-sm-2 rounded-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar" id="input-pesquisar">
+      </form>
+  
+    <div class="collapse navbar-collapse flex-row d-flex align-items-end justify-content-end mr-5" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav align-self-end">
+        <li class="nav-item active ">
+          <a class="nav-link" routerLink="/inicio"> 
+            <ul class="text-center list-unstyled"> 
+              <li><img class="icons" src="../../assets/img/icon-casinha.svg" alt="icone-inicio"></li>
+              <li class="fs-nav">Início</li>
+            </ul>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/evento"> 
+            <ul class="text-center list-unstyled "> 
+              <li><img class="icons" src="../../assets/img/icon-maletinha.svg" alt="icone-eventos"></li>
+              <li class="fs-nav">Eventos</li>
+            </ul>
+          </a>
+        </li>
+        <li class="nav-item align-bottom">
+          <a class="nav-link" href="#"> 
+            <ul class="text-center list-unstyled"> 
+              <li><img class="icons" src="../../assets/img/icon-mensagem.svg" alt="icone-mensagens"></li>
+              <li class="fs-nav">Mensagens</li>
+            </ul>
+          </a>
+        </li>
+        <li class="nav-item align-bottom">
+          <a class="nav-link" href="#"> 
+            <ul class="text-center list-unstyled"> 
+              <li><img class="icons" src="../../assets/img/icon-sino.svg" alt="icone-notificacoes"></li>
+              <li class="fs-nav">Notificações</li>
+            </ul>
+          </a>
+        </li>
+        <li class="nav-item align-bottom">
+          <a class="nav-link" href="#"> 
+            <ul class="text-center list-unstyled"> 
+              <li><img class="icons" src="../../assets/img/icon-perfil.svg" alt="icone-atualizar-perfil"></li>
+              <li class="fs-nav">Perfil</li>
+            </ul>
+          </a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </nav>
+
+  <!-- /menu importado -->
   
  
    

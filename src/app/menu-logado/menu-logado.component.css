@@ -2,24 +2,37 @@
   background-color: var(--color-yellow);
   height: 4rem;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
+
 }
 
 .logo-area:hover {
   cursor: pointer;
 }
 
-.options-area {
-  display: flex;
-  gap: 2rem;
+
+
+
+
+
+
+.fs-nav {
+  font-size: .9rem;
+  color: white;
+  font-weight: 600;
 }
 
-.option:hover {
-  cursor: pointer;
+.icons {
+  height: 1.5rem;
 }
-.image-color{
-  color: #fff;
+
+.logo {
+  height: 2rem;
+}
+
+#input-pesquisar {
+  border-radius: 22px;
+}
+
+#input-pesquisar {
+  border: 1px solid white;
 }
