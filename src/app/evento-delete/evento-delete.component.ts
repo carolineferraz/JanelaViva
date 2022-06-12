@@ -23,22 +23,22 @@ export class EventoDeleteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token == ''){
+    if (environment.token == '') {
       this.router.navigate(['/entrar'])
-     } 
-     this.idEvento = this.route.snapshot.params['id']
-     this.findByIdEvento(this.idEvento)
+    }
+    this.idEvento = this.route.snapshot.params['id']
+    this.findByIdEvento(this.idEvento)
   }
 
-  findByIdEvento(id: number){
-    this.eventoService.getByIdEvento(id).subscribe((resp: Evento)=>{
+  findByIdEvento(id: number) {
+    this.eventoService.getByIdEvento(id).subscribe((resp: Evento) => {
       this.evento = resp
     })
   }
-  apagar(){
-    this.eventoService.deleteEvento(this.idEvento).subscribe(()=>{
-      alert('Tema deletado com sucesso!')
-      this.router.navigate(['/evento'])
+  apagar() {
+    this.eventoService.deleteEvento(this.idEvento).subscribe(() => {
+      alert('Evento deletado com sucesso!')
+      this.router.navigate(['/inicio'])
     })
   }
 
