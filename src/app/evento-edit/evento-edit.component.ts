@@ -27,6 +27,7 @@ export class EventoEditComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
     let id = this.route.snapshot.params['id']
+    console.log(this.route.snapshot)
     this.findByIdEvento(id)
     console.log(this.evento)
 
