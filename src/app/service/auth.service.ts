@@ -14,6 +14,8 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
+  usuario: Usuario = new Usuario();
+
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }

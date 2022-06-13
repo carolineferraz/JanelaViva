@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
+import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
+import { UsuarioService } from '../service/usuario.service';
 
 @Component({
   selector: 'app-inicio',
@@ -12,9 +14,11 @@ import { PostagemService } from '../service/postagem.service';
 })
 export class InicioComponent implements OnInit {
 
+
   constructor(
     private router: Router,
     public postagemService: PostagemService,
+
   ) { }
 
   ngOnInit(): void {
