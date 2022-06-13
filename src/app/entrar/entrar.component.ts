@@ -23,6 +23,7 @@ export class EntrarComponent implements OnInit {
   }
 
   entrar() {
+
     this.authService.entrar(this.usuarioLogin).subscribe({
       next: ((res: UsuarioLogin) => {
         this.usuarioLogin = res;

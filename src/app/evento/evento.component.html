@@ -49,7 +49,10 @@
               <button
                 type="submit"
                 class="w-100 mt-3 mr-3 ml-3 btn-criar"
-                (click)="cadastrar()" [disabled]= "tipoUsuario !== 'adm'"
+
+                type="submit"
+                (click)="cadastrar()"
+
               >
                 Criar
               </button>
@@ -75,13 +78,15 @@
           <img src="{{ evento.imagem }}" alt="imagem evento" />
         </div>
 
+
         <div class="card container-fluid ml-3 mt-3 mb-3" style="width: 15rem;">
           <ul class="list-group list-group-flush d-flex justify-content-center">
             <li class="list-group-item "><h4>{{ evento.titulo }}</h4></li>
             <li class="list-group-item "><p class="text-over-flow">{{ evento.descricao }}</p></li>
             <li class="list-group-item"> <div class="row d-flex justify-content-center"> Data: <p class="background-font-color pr-2 pl-2">{{ evento.data | date: "dd/MM/yyyy" }}</p></div></li>
+
           </ul>
-        </div>    
+        </div>
         <div class="ver-mais-section mt-1 mb-1">
           <button
             class="btn btn-ver-post mr-2 ml-2"
@@ -108,7 +113,7 @@
             <span>Excluir</span>
           </button>
         </div>
-      
+      </div>
     </div>
   </div>
 </div>

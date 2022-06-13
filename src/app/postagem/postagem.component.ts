@@ -46,6 +46,7 @@ export class PostagemComponent implements OnInit {
     this.getAllEventos()
     this.getAllPostagens()
 
+
   }
 
   getAllPostagens() {
@@ -70,6 +71,7 @@ export class PostagemComponent implements OnInit {
 
   findByIdUsuario() {
     this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario) => {
+
       this.usuario = resp
     })
   }
@@ -85,6 +87,7 @@ export class PostagemComponent implements OnInit {
     this.usuarioPost.id = this.idUsuario
     this.postagem.usuario = this.usuarioPost
 
+    console.log(this.postagem)
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
 

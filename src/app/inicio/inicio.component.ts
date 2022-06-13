@@ -22,10 +22,10 @@ export class InicioComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // if (environment.token === '') {
-    //   this.router.navigate(['/entrar'])
-    // }
-
+    if (environment.token === '') {
+      this.router.navigate(['/entrar'])
+    }
+    console.log(environment.token, environment.tipo)
     this.getAllPostagens();
 
   }
