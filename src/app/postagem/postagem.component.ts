@@ -77,6 +77,7 @@ export class PostagemComponent implements OnInit {
   }
 
   publicar() {
+    console.log()
 
     this.evento.postagens = []
 
