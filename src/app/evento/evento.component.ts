@@ -28,6 +28,7 @@ export class EventoComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
+    this.tipoUsuario = environment.tipo;
     this.findAllEventos()
   }
 
@@ -39,6 +40,10 @@ export class EventoComponent implements OnInit {
   }
 
   cadastrar() {
+    if (this.tipoUsuario === 'vol') {
+      alert('Você não tem permissão para criar evento!');
+      return;
+    }
 
     this.eventoService.postEvento(this.evento).subscribe((resp: Evento) => {
       this.evento = resp
@@ -56,8 +61,10 @@ export class EventoComponent implements OnInit {
   }
 
   isUsuarioAdmin(): boolean {
+
     this.tipoUsuario = environment.tipo;
     return this.tipoUsuario === 'adm';
   }
+
 
 }

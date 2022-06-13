@@ -31,6 +31,7 @@ export class UsuarioEditComponent implements OnInit {
 
     this.authService.refreshToken();
     this.idUsuario = environment.id;
+
     this.findByIdUsuario(this.idUsuario);
   }
 
@@ -49,8 +50,8 @@ export class UsuarioEditComponent implements OnInit {
   }
 
   atualizar() {
-    this.usuario.tipo = 'adm'
-
+    this.usuario.tipo = environment.tipo
+    console.log('Antes: ' + this.usuario)
     if (this.usuario.senha != this.confirmarSenh) {
       alert('Senha incorreta!')
     } else {
@@ -59,6 +60,8 @@ export class UsuarioEditComponent implements OnInit {
           this.usuario = res;
           this.usuarioLogin.usuario = this.usuario.email;
           this.usuarioLogin.senha = this.confirmarSenh;
+
+          console.log('Depois: ' + this.usuario)
 
           this.authService.entrar(this.usuarioLogin).subscribe({
             next: (res: UsuarioLogin) => {
