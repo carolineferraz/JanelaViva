@@ -1,3 +1,4 @@
+<!-- Início do menu cadastro de eventos -->
 <div class="container-fluid mt-0">
   <div class="row">
     <div class="col-md-12 mt-0">
@@ -6,7 +7,7 @@
           <div class="col-md-12">
             <h2 class="text-center">Criar um Evento</h2>
             <div class="form-group m-3">
-              <label for="titulo">Título: <img src="../../assets/img/title.png" alt="" width="22px" class="pb-1"></label>
+              <label for="titulo">Título: <i class="fa fa-pencil" aria-hidden="true"></i></label>
               <input
                 [(ngModel)]="evento.titulo"
                 type="text"
@@ -63,7 +64,9 @@
     </div>
   </div>
 </div>
+<!-- Fim do menu cadastro de eventos -->
 
+<!-- Início dos cards de eventos -->
 <div class="container">
   <div class="row mt-5">
     <div class="col-md-12 outros-eventos mb-3">
@@ -79,13 +82,12 @@
         </div>
 
 
-        <div class="card container-fluid ml-3 mt-3 mb-3" style="width: 15rem;">
-          <ul class="list-group list-group-flush d-flex justify-content-center">
-            <li class="list-group-item "><h4>{{ evento.titulo }}</h4></li>
-            <li class="list-group-item "><p class="text-over-flow">{{ evento.descricao }}</p></li>
-            <li class="list-group-item"> <div class="row d-flex justify-content-center"> Data: <p class="background-font-color pr-2 pl-2">{{ evento.data | date: "dd/MM/yyyy" }}</p></div></li>
+        <div class="container-fluid  mt-3 mb-3">
+          
+            <li class="list-group-item text-center title-overflow"><h4>{{ evento.titulo }}</h4></li>
+            <li class="list-group-item text-center"><p class="text-over-flow">{{ evento.descricao }}</p></li>
+            <li class="list-group-item text-center"> <div class="row d-flex justify-content-center"> Data: <p class="background-font-color pr-2 pl-2">{{ evento.data | date: "dd/MM/yyyy" }}</p></div></li>
 
-          </ul>
         </div>
         <div class="ver-mais-section mt-1 mb-1">
           <button
@@ -117,3 +119,4 @@
     </div>
   </div>
 </div>
+<!-- Fim dos cards de eventos -->
