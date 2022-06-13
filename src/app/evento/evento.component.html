@@ -6,7 +6,7 @@
           <div class="col-md-12">
             <h2 class="text-center">Criar um Evento</h2>
             <div class="form-group m-3">
-              <label for="titulo">Título:</label>
+              <label for="titulo">Título: <img src="../../assets/img/title.png" alt="" width="22px" class="pb-1"></label>
               <input
                 [(ngModel)]="evento.titulo"
                 type="text"
@@ -16,7 +16,7 @@
               />
             </div>
             <div class="form-group m-3">
-              <label for="descricao">Descrição:</label>
+              <label for="descricao">Descrição: <img src="../../assets/img/descricao.png" alt="" width="22px"></label>
               <input
                 [(ngModel)]="evento.descricao"
                 type="text"
@@ -26,7 +26,7 @@
               />
             </div>
             <div class="form-group m-3">
-              <label for="imagem">Imagem:</label>
+              <label for="imagem">Imagem:<i class="fa fa-picture-o pl-2" aria-hidden="true"></i></label>
               <input
                 [(ngModel)]="evento.imagem"
                 type="text"
@@ -36,7 +36,7 @@
               />
             </div>
             <div class="form-group m-3">
-              <label for="imagem">Data da ação:</label>
+              <label for="imagem">Data da ação: <img src="../../assets/img/calendar.png" alt="" width="22px"></label>
               <input
                 [(ngModel)]="evento.data"
                 type="date"
@@ -47,8 +47,9 @@
             </div>
             <div class="d-flex">
               <button
+                type="submit"
                 class="w-100 mt-3 mr-3 ml-3 btn-criar"
-                (click)="cadastrar()"
+                (click)="cadastrar()" [disabled]= "tipoUsuario !== 'adm'"
               >
                 Criar
               </button>
@@ -63,23 +64,22 @@
 <div class="container">
   <div class="row mt-5">
     <div class="col-md-12 outros-eventos mb-3">
-      <h2 class="text-center">Outros Eventos</h2>
+      <h2 class="text-center pt-2 pb-2">Outros Eventos</h2>
     </div>
   </div>
 
   <div class="row mt-3 mb-5 d-flex justify-content-center">
     <div class="col-md-6 mb-3" *ngFor="let evento of listaEventos">
       <div class="card-shadow evento-card">
-        <div class="evento-image-container mt-1 mr-2 ml-2">
+        <div class="evento-image-container mt-3 mr-3 ml-3">
           <img src="{{ evento.imagem }}" alt="imagem evento" />
         </div>
 
-        <div class="card ml-3 mt-2 mb-2" style="width: 15rem;">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h4>{{ evento.titulo }}</h4></li>
-            <li class="list-group-item"><p class="text-over-flow">{{ evento.descricao }}</p></li>
-            <li class="list-group-item"> <div class="row"> Data:
-              <p class="background-font-color">{{ evento.data | date: "dd/MM/yyyy" }}</p></div></li>
+        <div class="card container-fluid ml-3 mt-3 mb-3" style="width: 15rem;">
+          <ul class="list-group list-group-flush d-flex justify-content-center">
+            <li class="list-group-item "><h4>{{ evento.titulo }}</h4></li>
+            <li class="list-group-item "><p class="text-over-flow">{{ evento.descricao }}</p></li>
+            <li class="list-group-item"> <div class="row d-flex justify-content-center"> Data: <p class="background-font-color pr-2 pl-2">{{ evento.data | date: "dd/MM/yyyy" }}</p></div></li>
           </ul>
         </div>    
         <div class="ver-mais-section mt-1 mb-1">
