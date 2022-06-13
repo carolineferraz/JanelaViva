@@ -57,6 +57,9 @@ button.btn-criar:hover {
   margin: 0;
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  
 }
 
 .evento-body {

@@ -29,6 +29,7 @@ export class EventoComponent implements OnInit {
     }
 
     this.findAllEventos()
+    this.tipoUsuario = String(environment.id)
   }
 
   findAllEventos() {
