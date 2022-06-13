@@ -30,9 +30,10 @@
 }
 
 .habilidade {
-  border: 1px solid #444;
+  border: 1px solid hsl(205,47%,42%);
   padding: 0.1rem 0.5rem;
-  background-color: #edeade;
+  background-color:var(--color-blue);
+  color: var(--color-dark-blue);
   font-size: 13px;
 }
 
