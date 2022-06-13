@@ -33,7 +33,8 @@ export class EventoComponent implements OnInit {
 
   findAllEventos() {
     this.eventoService.getAllEventos().subscribe((resp: Evento[]) => {
-      this.listaEventos = resp
+      this.listaEventos = resp;
+      this.eventoService.eventos = resp;
     })
   }
 
@@ -41,7 +42,7 @@ export class EventoComponent implements OnInit {
 
     this.eventoService.postEvento(this.evento).subscribe((resp: Evento) => {
       this.evento = resp
-      alert('Tema cadastrado com sucesso!')
+      alert('Evento cadastrado com sucesso!')
       this.findAllEventos()
       this.evento = new Evento()
     })

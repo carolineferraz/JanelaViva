@@ -46,7 +46,6 @@ export class PostagemComponent implements OnInit {
     this.getAllEventos()
     this.getAllPostagens()
 
-
   }
 
   getAllPostagens() {
@@ -76,28 +75,23 @@ export class PostagemComponent implements OnInit {
   }
 
   publicar() {
-    console.log(this.evento)
+
+    this.evento.postagens = []
 
     this.evento.id = this.idEvento
     this.postagem.evento = this.evento
 
     this.usuarioPost.id = this.idUsuario
     this.postagem.usuario = this.usuarioPost
-    console.log(this.postagem)
+
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
-      console.log(resp)
+
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
   }
-
-
-
-
-
-
 
 }
