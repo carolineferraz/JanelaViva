@@ -36,3 +36,7 @@
 #input-pesquisar {
   border: 1px solid white;
 }
+
+.nav-link:hover {
+  opacity: 70%;
+}

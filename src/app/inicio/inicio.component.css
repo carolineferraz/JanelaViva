@@ -118,7 +118,7 @@
 }
 
 .like-comment-area span {
-  color: #696969;
+  color: var(--color-gray);
 }
 
 .like span {

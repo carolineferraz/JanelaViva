@@ -38,7 +38,7 @@ button.btn-criar {
 }
 
 button.btn-criar:hover {
-  background-color: #e2a60e;
+  background-color: var(--color-mustard);
 }
 
 .evento-card {
@@ -98,7 +98,8 @@ button.btn-criar:hover {
 }
 
 .ver-mais-section .btn-ver-post:hover {
-  background-color: var(--color-yellow);
+
+  background-color: var(--color-mustard);
 }
 
 .btn-editar-post {
