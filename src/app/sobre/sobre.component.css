@@ -1,5 +1,13 @@
-#bg-color-red {
-    background-color: #FE543B;
+#bg-03 {
+    background-image: url("../../assets/img/bg-03.svg");
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+
+#bg-05 {
+    background-image: url("../../assets/img/bg-05.svg");
+    background-repeat: repeat-y;
+    background-size: contain;
 }
 
 #bg-color-blue {
@@ -20,4 +28,8 @@ span{
 
 .it{
     font-style: italic;
+}
+
+.img-transicao {
+    width: 100%;
 }
