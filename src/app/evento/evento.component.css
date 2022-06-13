@@ -146,6 +146,14 @@ small {
   overflow: hidden;
 
 }
+.title-overflow{
+  text-overflow: ellipsis;
+  display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
 .background-font-color{
   background-color: var(--color-blue);
   color: var(--color-dark-blue);
@@ -153,3 +161,6 @@ small {
 .font-data-color{
   color: var(--color-dark-gray);
 }
+/* text-area{
+  ;
+} */
