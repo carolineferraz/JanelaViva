@@ -12,6 +12,7 @@
           class="form-control"
           name="usuario"
           placeholder="DIGITE SEU EMAIL"
+          selected
           [(ngModel)]="usuarioLogin.usuario"
         />
       </div>
@@ -25,7 +26,7 @@
         />
       </div>
       <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-main" (click)="entrar()">
+        <button type="submit" class="btn btn-main" [disabled]="usuarioLogin.senha == '' " (click)="entrar()">
           Entrar
         </button>
       </div>
