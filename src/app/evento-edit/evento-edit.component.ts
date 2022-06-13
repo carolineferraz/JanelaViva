@@ -14,7 +14,6 @@ export class EventoEditComponent implements OnInit {
 
   evento: Evento = new Evento()
 
-
   constructor(
     private eventoService: EventoService,
     private router: Router,
@@ -27,9 +26,9 @@ export class EventoEditComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
     let id = this.route.snapshot.params['id']
-    console.log(this.route.snapshot)
+
     this.findByIdEvento(id)
-    console.log(this.evento)
+
 
   }
 
@@ -39,11 +38,23 @@ export class EventoEditComponent implements OnInit {
     })
   }
 
+  getAllEventos() {
+    this.eventoService.getAllEventos().subscribe((resp: Evento[]) => {
+      this.eventoService.eventos = resp;
+    })
+  }
+
   atualizar() {
-    this.eventoService.putEvento(this.evento).subscribe((resp: Evento) => {
-      this.evento = resp
-      alert('Evento atualizado!')
-      this.router.navigate(['/evento'])
+    this.evento.postagens = [];
+    this.eventoService.putEvento(this.evento).subscribe({
+      next: (res: Evento) => {
+        this.evento = res;
+        console.log(res)
+        alert('Evento atualizado com sucesso!')
+        this.getAllEventos()
+        this.router.navigate(['/inicio'])
+      },
+      error: err => console.log(err)
     })
   }
 

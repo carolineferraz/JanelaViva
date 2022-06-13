@@ -9,28 +9,30 @@ import { Evento } from '../model/Evento';
 })
 export class EventoService {
 
+  eventos: Evento[] = [];
+
   constructor(
     private http: HttpClient
   ) { }
 
-  token={
-    headers:new HttpHeaders().set('Authorization',environment.token)
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  getAllEventos():Observable<Evento[]>{
-    return this.http.get<Evento[]>('https://janela-viva.herokuapp.com/eventos', this.token)    
+  getAllEventos(): Observable<Evento[]> {
+    return this.http.get<Evento[]>('https://janela-viva.herokuapp.com/eventos', this.token)
   }
-  getByIdEvento(id: number):Observable<Evento>{
-      return this.http.get<Evento>(`https://janela-viva.herokuapp.com/eventos/${id}`, this.token) 
+  getByIdEvento(id: number): Observable<Evento> {
+    return this.http.get<Evento>(`https://janela-viva.herokuapp.com/eventos/${id}`, this.token)
   }
-  postEvento(evento: Evento):Observable<Evento>{
-    return this.http.post<Evento>('https://janela-viva.herokuapp.com/eventos',evento, this.token) 
+  postEvento(evento: Evento): Observable<Evento> {
+    return this.http.post<Evento>('https://janela-viva.herokuapp.com/eventos', evento, this.token)
   }
-  putEvento(evento: Evento):Observable<Evento>{
-    return this.http.put<Evento>('https://janela-viva.herokuapp.com/eventos',evento, this.token) 
+  putEvento(evento: Evento): Observable<Evento> {
+    return this.http.put<Evento>('https://janela-viva.herokuapp.com/eventos', evento, this.token)
   }
-  deleteEvento(id: number){
-    return this.http.delete(`https://janela-viva.herokuapp.com/eventos/${id}`, this.token) 
+  deleteEvento(id: number) {
+    return this.http.delete(`https://janela-viva.herokuapp.com/eventos/${id}`, this.token)
   }
 
 }

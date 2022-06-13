@@ -43,7 +43,10 @@
           <div class="col-md-6">
             <div class="participantes-estimados-wrapper">
               <h5>Estimativa de participantes necessários:</h5>
-              <h5>{{ evento.postagens.length }}</h5>
+              <h5 *ngIf="evento.postagens.length > 0">
+                {{ evento.postagens.length }}
+              </h5>
+              <h5 *ngIf="evento.postagens.length === 0">0</h5>
             </div>
           </div>
         </div>
