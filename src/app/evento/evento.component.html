@@ -70,19 +70,21 @@
   <div class="row mt-3 mb-5 d-flex justify-content-center">
     <div class="col-md-6 mb-3" *ngFor="let evento of listaEventos">
       <div class="card-shadow evento-card">
-        <div class="evento-image-container">
+        <div class="evento-image-container mt-1 mr-2 ml-2">
           <img src="{{ evento.imagem }}" alt="imagem evento" />
         </div>
-        <div class="evento-body mt-1 mb-1 pl-1 pr-1">
+        <div class="evento-body mt-2 mb-2 mr-2 ml-2 pl-1 pr-1 ">
           <h4>
             {{ evento.titulo }}
           </h4>
-          <p class="">{{ evento.descricao }}</p>
+          <hr>
+          <p class="text-over-flow">{{ evento.descricao }}</p>
+          <hr>
           <p class="">Data: {{ evento.data | date: "dd/MM/yyyy" }}</p>
         </div>
         <div class="ver-mais-section mt-1 mb-1">
           <button
-            class="btn btn-ver-post"
+            class="btn btn-ver-post mr-2 ml-2"
             [routerLink]="['/evento-postagens', evento.id]"
           >
             <span>Ver Postagens</span>
@@ -94,13 +96,13 @@
           *ngIf="checaPossibilidadeAlteracaoEvento(evento.id)"
         >
           <button
-            class="btn btn-outline-warning btn-editar-post"
+            class="btn btn-outline btn-editar-post"
             [routerLink]="['/evento-edit', evento.id]"
           >
             <span>Editar</span>
           </button>
           <button
-            class="btn btn-outline-warning btn-excluir-post"
+            class="btn btn-outline btn-excluir-post"
             [routerLink]="['/evento-delete', evento.id]"
           >
             <span>Excluir</span>
