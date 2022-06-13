@@ -143,3 +143,10 @@ small {
   overflow: hidden;
 
 }
+.background-font-color{
+  background-color: var(--color-blue);
+  color: var(--color-dark-blue);
+}
+.font-data-color{
+  color: var(--color-dark-gray);
+}
