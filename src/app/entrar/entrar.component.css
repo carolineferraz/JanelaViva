@@ -42,7 +42,7 @@
 }
 
 .form-area .btn-main:hover {
-  background-color: #e2a60e;
+  background-color: var(--color-mustard);
 }
 
 .form-area input {

@@ -63,7 +63,7 @@ h2 {
 }
 
 .btn-nao:hover {
-  background-color: #e2a60e;
+  background-color: var(--color-mustard);
 }
 
 .btn-nao span {

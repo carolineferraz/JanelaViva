@@ -1,3 +1,8 @@
+img {
+    height: 50px;
+    margin-top: 8px;
+}
+
 #bg-img{
     background-image: url("../../assets/img/bg-entrar.avif");
     min-height: 100vh;
@@ -5,7 +10,6 @@
     background-size: cover;
 }
 .form-area{
-    border: 1px solid;
     background-color: rgba(255, 255, 255, 0.7);
 }
 .form-area input::placeholder {
@@ -49,7 +53,7 @@
 }
 
 .border-r{
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .cor-select{
@@ -58,7 +62,17 @@
 
 .btn-cad{
     color: var(--color-white);
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: var(--color-yellow);
+    height: 45px;
+}
+
+.btn-cad:hover {
+    background-color: var(--color-mustard);
+}
+
+.btn-cad span:hover {
+    color:rgba(255, 255, 255, 0.7);
 }
 
 .btn-fechar {
