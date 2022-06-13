@@ -30,6 +30,7 @@
               <label for=""></label>
               <input
                 [(ngModel)]="usuario.email"
+                
                 name="email"
                 type="email"
                 class="form-control border border-warning border-r"
@@ -97,7 +98,7 @@
         <div class="d-flex justify-content-around pb-5">
           <button
             type="submit"
-            class="btn btn-lg btn-block btn-cad"
+            class="btn btn-lg btn-block btn-cad" [disabled]="!checaEmail(usuario.email)"
             (click)="cadastrar()"
           >
             <span>Cadastrar</span>
