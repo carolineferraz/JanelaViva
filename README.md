@@ -42,4 +42,4 @@ Vai dar um 👋🏽 pra gente no LinkedIn:
 - Danielle Guimarães
 - Fábio Monteiro [![Linkedin Badge](https://img.shields.io/badge/-fabiomrm-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/fabiomrm/)](https://www.linkedin.com/in/fabiomrm/)
 - Janderson Paixão
-- Luana Siqueira  [![Linkedin Badge](https://img.shields.io/badge/-luana-chaves-siqueira-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/fabiomrm/)](https://www.linkedin.com/in/luana-chaves-siqueira/)
+- Luana Siqueira  [![Linkedin Badge](https://img.shields.io/badge/-luana-chaves-siqueira-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/luana-chaves-siqueira/)](https://www.linkedin.com/in/luana-chaves-siqueira/)
