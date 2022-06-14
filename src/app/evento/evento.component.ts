@@ -66,6 +66,4 @@ export class EventoComponent implements OnInit {
     this.tipoUsuario = environment.tipo;
     return this.tipoUsuario === 'adm';
   }
-
-
 }
