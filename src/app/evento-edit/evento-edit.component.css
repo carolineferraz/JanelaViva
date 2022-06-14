@@ -4,7 +4,7 @@ h1 {
 
 .card-shadow {
   box-shadow: 5px 7px 11px rgba(0, 0, 0, 0.25);
-  border: 3px solid var(--color-yellow);
+  border: 1px solid var(--color-yellow);
   border-radius: 1.25rem;
 }
 
@@ -19,12 +19,8 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-
-.font-cadastrar {
-  color: var(--color-yellow);
-}
-
 .participantes-estimados-wrapper {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,9 +28,9 @@ h1 {
 }
 
 .participantes-estimados-wrapper h5 + h5 {
-  border: 1px solid var(--color-yellow);
-  background-color: #ccc;
-  color: #000;
+  border: 1px solid var(--color-dark-blue);
+  background-color: var(--color-blue);
+  color: var(--color-dark-blue);
   padding: 0.3rem 0.5rem;
 }
 
@@ -57,4 +53,22 @@ h1 {
 
 button {
   background-color: var(--color-yellow);
+}
+.button {
+  border: 0px solid var(--color-yellow);
+  background-color: var(--color-yellow);
+  border-radius: 20px;
+  width: 100%;
+  color: #fff;
+  height: 35px;
+  border-radius: 8px;
+}
+.font-dark-gray{
+  color: #343a40;
+}
+.font-light-gray{
+  color: var(--color-light-gray);
+}
+.color-border{
+  border-color: var(--color-light-gray);
 }

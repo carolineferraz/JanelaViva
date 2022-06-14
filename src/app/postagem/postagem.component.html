@@ -1,5 +1,6 @@
-<div class="form-group">
-  <h2 class="text-center mb-4">Fazer uma publicação</h2>
+
+  <div class="form-group pl-4">
+  <h2 class="text-center mb-4">Comece sua publicação <i class="fa fa-hand-o-down font-icon" aria-hidden="true"></i></h2>
   <label for="descricao">Digite aqui o texto da sua publicação:</label>
   <textarea
     [(ngModel)]="postagem.descricao"
@@ -9,7 +10,7 @@
     placeholder="Informações relevantes sobre os eventos e demandas necessárias!"
   ></textarea>
 </div>
-<div class="form-group">
+<div class="form-group pl-4">
   <label for="foto">Insira aqui o link da imagem:</label>
   <input
     type="text"
@@ -20,7 +21,7 @@
   />
 </div>
 
-<div class="form-group">
+<div class="form-group pl-4">
   <label for="evento">Informe para qual evento a publicação se refere:</label>
   <select
     name="evento"
@@ -34,5 +35,7 @@
     </option>
   </select>
 </div>
+<div class="pl-4">
+<button type="button" class="button"  (click)="publicar()">Publicar</button>
+</div>
 
-<button type="button" class="button" (click)="publicar()">Publicar</button>
