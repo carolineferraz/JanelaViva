@@ -130,3 +130,12 @@ ul.social-network li {
   font-style: italic;
   font-weight: 200;
 }
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.link-gen:hover {
+  color: var(--color-blue);
+}
