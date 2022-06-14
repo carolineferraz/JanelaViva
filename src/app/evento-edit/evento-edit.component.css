@@ -1,0 +1,74 @@
+h1 {
+  font-size: 2rem;;
+}
+
+.card-shadow {
+  box-shadow: 5px 7px 11px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-yellow);
+  border-radius: 1.25rem;
+}
+
+.atualizar-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.participantes-estimados-wrapper {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.participantes-estimados-wrapper h5 + h5 {
+  border: 1px solid var(--color-dark-blue);
+  background-color: var(--color-blue);
+  color: var(--color-dark-blue);
+  padding: 0.3rem 0.5rem;
+}
+
+.fs-18 {
+  font-size: 18pt;
+}
+
+.border-r {
+  border-radius: 15px;
+}
+
+.cor-select {
+  color: var(--color-yellow);
+}
+
+.btn-cad {
+  color: var(--color-white);
+  border-radius: 15px;
+}
+
+button {
+  background-color: var(--color-yellow);
+}
+.button {
+  border: 0px solid var(--color-yellow);
+  background-color: var(--color-yellow);
+  border-radius: 20px;
+  width: 100%;
+  color: #fff;
+  height: 35px;
+  border-radius: 8px;
+}
+.font-dark-gray{
+  color: #343a40;
+}
+.font-light-gray{
+  color: var(--color-light-gray);
+}
+.color-border{
+  border-color: var(--color-light-gray);
+}

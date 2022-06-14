@@ -1,0 +1,89 @@
+<!-- INÍCIO DO CONTÊINER QUE POSSUI TODOS OS COMPONENTES DE MENU -->
+<div class="container-fluid justify-content-center">
+  <!-- INÍCIO DO COMPONENTE PARA ESCRITA DE COMENTÁRIOS -->
+  <div class="card card-shadow mb-4 col-md-12">
+    <div class="row mt-4 mb-4 mr-2">
+      <div class="col-md-12">
+        <app-postagem></app-postagem>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DO COMPONENTE PARA ESCRITA DE COMENTÁRIOS -->
+
+  <!-- INÍCIO DO COMPONENTE DE PUBLICAÇÃO -->
+  <div *ngFor="let postagem of postagemService.postagens">
+    <div class="card card-shadow mb-2" style="width: 100%">
+      <div class="card-header">
+        <div class="app-user-profile-wrapper">
+          <div class="user-profile-picture-border normal-size">
+            <div>
+              <img src="{{ postagem.usuario.foto }}" alt="foto usuario" />
+            </div>
+          </div>
+        </div>
+        <div class="card-header-user-info">
+          <h5>{{ postagem.usuario.nome }}</h5>
+          <p>Descrição do Usuário</p>
+          <small
+            >{{ postagem.data | date: "dd/MM/yyyy" }} •
+            <img src="../../assets/img/world.svg"
+          /></small>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ postagem.descricao }}</p>
+      </div>
+      <div class="card-body-image-area">
+        <img src="{{ postagem.foto }}" alt="foto postagem" />
+      </div>
+      <div class="like-comment-area">
+        <div class="like">
+          <img src="../../assets/img/like.svg" alt="botão de curtir" />
+          <span style="color: var(--color-yellow)">{{
+            postagem.curtidas
+          }}</span>
+        </div>
+        <span>1 comentário</span>
+      </div>
+      <div class="like-comment-action-area mb-1">
+        <div class="like-action-area">
+          <img
+            src="../../assets/img/like-big.svg"
+            alt="botão de ação de curtir"
+            style="width: 25px; height: 25px"
+          />
+          <p>Gostei</p>
+        </div>
+        <div class="comment-action-area">
+          <img
+            src="../../assets/img/icon-mensagem-yellow.svg"
+            alt="botão de ação de comentar"
+            style="width: 25px; height: 25px"
+          />
+          <p>Comentar</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row d-flex justify-content-center flex-nowrap">
+        <div class="col-md-3 d-flex justify-content-center align-items-center">
+          <div class="app-user-profile-wrapper">
+            <div class="user-profile-picture-border normal-size">
+              <div>
+                <img src="{{ postagem.usuario.foto }}" alt="foto usuario" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mr-2 mt-4">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control input-comentario"
+              placeholder="Escreva um comentário"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

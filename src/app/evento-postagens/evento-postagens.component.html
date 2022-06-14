@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 card-shadow p-3 mb-3">
+      <h2 class="h2-1">Todas as Postagens do Evento:</h2><h2 class="h2-2"> {{ evento.titulo }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor="let postagem of evento.postagens">
+        <div class="card card-shadow mb-2" style="width: 100%">
+          <div class="card-header">
+            <div class="app-user-profile-wrapper">
+              <div class="user-profile-picture-border normal-size">
+                <div>
+                  <img src="{{ postagem.usuario.foto }}" alt="foto usuario" />
+                </div>
+              </div>
+            </div>
+            <div class="card-header-user-info">
+              <h5>{{ postagem.usuario.nome }}</h5>
+              <small
+                >{{ postagem.data | date: "dd/MM/yyyy" }} •
+                <img src="../../assets/img/world.svg"
+              /></small>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ postagem.descricao }}</p>
+          </div>
+          <div class="card-body-image-area">
+            <img src="{{ postagem.foto }}" alt="foto postagem" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,40 +1,60 @@
+<app-menu></app-menu>
 <div id="bg-img" class="cadastrar-container">
   <div class="row d-flex justify-content-center" style="width: 1500px">
     <div class="col-md-8 form-area font-cadastrar">
-      <div class="row">
-        <div class="col-md-8 justify-content-center">
-          <img src="../../assets/img/logo.svg" alt="" />
+      <div class="row grid">
+        <div class="col-md-8 janela-viva">
+          <img src="../../assets/img/logo-amarela.svg" alt="logo-janela-viva" />
         </div>
-        <div class="col-md-4">
-          <i class="fa fa-times" aria-hidden="true"></i>
+        <div class="col-md-4 icone">
+          <p class="btn-fechar" routerLink="/entrar">
+            <i class="fa fa-times fs-18" aria-hidden="true"></i>
+          </p>
         </div>
       </div>
-      <h1>Cadastrar</h1>
+      <h1>Cadastre-se:</h1>
       <form>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label for=""></label>
               <input
+                [(ngModel)]="usuario.nome"
+                name="nome"
                 type="text"
-                class="form-control"
+                class="form-control border border-warning border-r"
                 placeholder="Digite seu nome"
               />
             </div>
             <div class="form-group">
               <label for=""></label>
               <input
+                [(ngModel)]="usuario.email"
+                
+                name="email"
                 type="email"
-                class="form-control"
+                class="form-control border border-warning border-r"
                 placeholder="Digite seu email"
               />
             </div>
             <div class="form-group">
               <label for=""></label>
               <input
+                [(ngModel)]="usuario.idade"
+                name="idade"
                 type="text"
-                class="form-control"
+                class="form-control border border-warning border-r"
                 placeholder="Digite sua idade (se Voluntario)"
+              />
+            </div>
+            <div class="form-group">
+              <label for=""></label>
+              <input
+                [(ngModel)]="usuario.foto"
+                name="idade"
+                type="text"
+                class="form-control border border-warning border-r"
+                placeholder="link da imagem"
               />
             </div>
           </div>
@@ -42,24 +62,33 @@
             <div class="form-group">
               <label for=""></label>
               <input
+                (input)="confirmSenha($event)"
+                name="senha"
                 type="password"
-                class="form-control"
+                class="form-control border border-warning border-r"
                 placeholder="Digite sua senha"
               />
             </div>
             <div class="form-group">
               <label for=""></label>
               <input
+                [(ngModel)]="usuario.senha"
+                name="confirmarSenha"
                 type="password"
-                class="form-control"
+                class="form-control border border-warning border-r"
                 placeholder="Confirmar senha"
               />
             </div>
             <div class="form-group">
               <label for=""></label>
-              <select class="form-control" name="tipo" id="tipo">
+              <select
+                class="form-control border border-warning border-r cor-select"
+                name="tipo"
+                id="tipo"
+                (change)="typeUser($event)"
+              >
                 <option>Selecione um tipo de usuário:</option>
-                <option value="normal">Normal</option>
+                <option value="vol">Voluntário</option>
                 <option value="adm">Administrador</option>
               </select>
             </div>
@@ -69,12 +98,11 @@
         <div class="d-flex justify-content-around pb-5">
           <button
             type="submit"
-            class="btn btn-danger padding-botao"
-            routerLink="/entrar"
+            class="btn btn-lg btn-block btn-cad" [disabled]="!checaEmail(usuario.email)"
+            (click)="cadastrar()"
           >
-            Cancelar
+            <span>Cadastrar</span>
           </button>
-          <button type="submit" class="btn btn-warning">Cadastrar</button>
         </div>
       </form>
     </div>

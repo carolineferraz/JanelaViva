@@ -1,5 +1,9 @@
-<div class="login-container" id="bg-img">
-  <div class="container-left">
+<div class="login-container mt-0" id="bg-img">
+  
+    <app-menu></app-menu>
+  
+  
+  <div class="container-left mt-5">
     <div class="form-area">
       <h1>Login</h1>
       <div class="form-group">
@@ -8,6 +12,8 @@
           class="form-control"
           name="usuario"
           placeholder="DIGITE SEU EMAIL"
+          selected
+          [(ngModel)]="usuarioLogin.usuario"
         />
       </div>
       <div class="form-group">
@@ -16,15 +22,22 @@
           class="form-control"
           name="senha"
           placeholder="DIGITE SUA SENHA"
+          [(ngModel)]="usuarioLogin.senha"
         />
       </div>
       <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-main">Entrar</button>
+        <button type="submit" class="btn btn-main" [disabled]="usuarioLogin.senha == '' " (click)="entrar()">
+          Entrar
+        </button>
       </div>
       <p><a href="">Esqueceu sua senha?</a></p>
     </div>
   </div>
-  <div class="container-right">
-    <p>JANELA VIVA É UMA REDE QUE CONECTA PESSOAS À AÇÕES</p>
+  <div class="container-right mt-5">
+    <p>JANELA VIVA É UMA <span>REDE</span> </p>
+    <p>QUE CONECTA <span>PESSOAS</span></p>
+    <p>À <span>AÇÕES</span></p>
   </div>
 </div>
+<app-sobre></app-sobre>
+<app-rodape></app-rodape>

@@ -1,0 +1,42 @@
+.menu-logado {
+  background-color: var(--color-yellow);
+  height: 4rem;
+  color: #fff;
+
+}
+
+.logo-area:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.fs-nav {
+  font-size: .9rem;
+  color: white;
+  font-weight: 600;
+}
+
+.icons {
+  height: 1.5rem;
+}
+
+.logo {
+  height: 2rem;
+}
+
+#input-pesquisar {
+  border-radius: 22px;
+}
+
+#input-pesquisar {
+  border: 1px solid white;
+}
+
+.nav-link:hover {
+  opacity: 70%;
+}

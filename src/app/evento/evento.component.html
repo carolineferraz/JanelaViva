@@ -1,0 +1,122 @@
+<!-- Início do menu cadastro de eventos -->
+<div class="container-fluid mt-0 ">
+  <div class="row">
+    <div class="col-md-12 mt-0">
+      <div class="card card-shadow background-color">
+        <div class="row d-flex justify-content-center mt-4 mb-5">
+          <div class="col-md-12">
+            <h2 class="text-center">Criar um Evento</h2>
+            <div class="form-group m-3">
+              <label for="titulo">Título: <i class="fa fa-pencil" aria-hidden="true"></i></label>
+              <input
+                [(ngModel)]="evento.titulo"
+                type="text"
+                class="form-control"
+                id="titulo"
+                placeholder="Digite o título do evento"
+              />
+            </div>
+            <div class="form-group m-3">
+              <label for="descricao">Descrição: <img src="../../assets/img/descricao.png" alt="" width="22px"></label>
+              <input
+                [(ngModel)]="evento.descricao"
+                type="text"
+                class="form-control"
+                id="descricao"
+                placeholder="Digite a descrição do evento"
+              />
+            </div>
+            <div class="form-group m-3">
+              <label for="imagem">Imagem:<i class="fa fa-picture-o pl-2" aria-hidden="true"></i></label>
+              <input
+                [(ngModel)]="evento.imagem"
+                type="text"
+                class="form-control"
+                id="imagem"
+                placeholder="Insira o link da imagem"
+              />
+            </div>
+            <div class="form-group m-3">
+              <label for="imagem">Data da ação: <img src="../../assets/img/calendar.png" alt="" width="22px"></label>
+              <input
+                [(ngModel)]="evento.data"
+                type="date"
+                class="form-control"
+                id="data"
+                placeholder="Digite a data do evento"
+              />
+            </div>
+            <div class="d-flex">
+              <button
+                type="submit"
+                class="w-100 mt-3 mr-3 ml-3 btn-criar"
+
+                type="submit"
+                (click)="cadastrar()"
+
+              >
+                Criar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fim do menu cadastro de eventos -->
+
+<!-- Início dos cards de eventos -->
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-12 outros-eventos mb-3">
+      <h2 class="text-center pt-2 pb-2">Outros Eventos</h2>
+    </div>
+  </div>
+
+  <div class="row mt-3 mb-5 d-flex justify-content-center">
+    <div class="col-md-6 mb-3" *ngFor="let evento of listaEventos">
+      <div class="card-shadow evento-card">
+        <div class="evento-image-container mt-3 mr-3 ml-3">
+          <img src="{{ evento.imagem }}" alt="imagem evento" />
+        </div>
+
+
+        <div class="container-fluid  mt-3 mb-3">
+          
+            <li class="list-group-item text-center title-overflow size-title"><h4>{{ evento.titulo }}</h4></li>
+            <li class="list-group-item text-center size-descricao"><p class="text-over-flow">{{ evento.descricao }}</p></li>
+            <li class="list-group-item text-center size-data"> <div class="row d-flex justify-content-center font-data-color"> Data: <p class="background-font-color pr-2 pl-2">{{ evento.data | date: "dd/MM/yyyy" }}</p></div></li>
+
+        </div>
+        <div class="ver-mais-section mt-1 mb-1">
+          <button
+            class="btn btn-ver-post mr-3 ml-3 mb-3"
+            [routerLink]="['/evento-postagens', evento.id]"
+          >
+            <span>Ver Postagens</span>
+          </button>
+        </div>
+
+        <div
+          class="edit-delete-section mt-3 mb-3"
+          *ngIf="checaPossibilidadeAlteracaoEvento(evento.id)"
+        >
+          <button
+            class="btn btn-outline btn-editar-post"
+            [routerLink]="['/evento-edit', evento.id]"
+          >
+            <span>Editar</span>
+          </button>
+          <button
+            class="btn btn-outline btn-excluir-post"
+            [routerLink]="['/evento-delete', evento.id]"
+          >
+            <span>Excluir</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fim dos cards de eventos -->

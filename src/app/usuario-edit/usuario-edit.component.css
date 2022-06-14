@@ -1,0 +1,67 @@
+.card-shadow {
+  box-shadow: 5px 7px 11px rgba(0, 0, 0, 0.25);
+  border: 3px solid var(--color-yellow);
+  border-radius: 1.25rem;
+}
+
+.atualizar-card {
+  display: flex;
+  justify-content: start;
+  /* align-items: center; */
+}
+
+.form-area {
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+.form-area input::placeholder {
+  color: var(--color-yellow);
+}
+
+.container-left {
+  display: flex;
+  justify-content: start;
+  /* align-items: center; */
+}
+
+.font-cadastrar {
+  color: var(--color-yellow);
+}
+.janela-viva {
+  display: flex;
+  justify-content: right;
+  width: 60;
+  margin-top: 15px;
+  padding-right: 5%;
+}
+.icone {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  padding-right: 3%;
+}
+.fs-18 {
+  font-size: 18pt;
+}
+
+.border-r {
+  border-radius: 15px;
+}
+
+.cor-select {
+  color: var(--color-yellow);
+}
+
+.btn-cad {
+  color: var(--color-white);
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+button {
+  background-color: var(--color-yellow);
+}
+
