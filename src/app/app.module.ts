@@ -24,6 +24,8 @@ import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
 import { EventoPostagensComponent } from './evento-postagens/evento-postagens.component';
 import { UsuarioPostagensComponent } from './usuario-postagens/usuario-postagens.component';
 import { UsuarioEditComponent } from './usuario-edit/usuario-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -48,14 +50,16 @@ import { UsuarioEditComponent } from './usuario-edit/usuario-edit.component';
     MenuLogadoComponent,
     EventoPostagensComponent,
     UsuarioPostagensComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    AlertasComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

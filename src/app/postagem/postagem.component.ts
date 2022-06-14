@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Evento } from '../model/Evento';
 import { Postagem } from '../model/Postagem';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { EventoService } from '../service/evento.service';
 import { PostagemService } from '../service/postagem.service';
@@ -32,7 +33,8 @@ export class PostagemComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     private eventoService: EventoService,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertasService: AlertasService
   ) { }
 
 
@@ -91,7 +93,7 @@ export class PostagemComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
 
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertasService.showAlertSuccess('Postagem realizado com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
