@@ -141,7 +141,7 @@ small {
 .text-over-flow{
   text-overflow: ellipsis;
   display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   overflow: hidden;
 
@@ -149,7 +149,7 @@ small {
 .title-overflow{
   text-overflow: ellipsis;
   display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   overflow: hidden;
 
@@ -161,6 +161,13 @@ small {
 .font-data-color{
   color: var(--color-dark-gray);
 }
-/* text-area{
-  ;
-} */
+
+.size-title{
+  block-size: 70pt;
+}
+.size-descricao{
+  block-size: 100px;
+}
+.size-data{
+  block-size: 30;
+}
