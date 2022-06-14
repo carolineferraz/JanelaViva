@@ -51,26 +51,25 @@ ul.social-network li {
   padding: 5px;
 }
 
-.im {
+/* .im {
   margin-top: 180px;
-}
+} */
 
 .iml {
   margin-left: 132px;
-}
+} 
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 400px;
+  width: 300px;
   height: 400px;
-
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-  position: center;
+  /* position: center; */
   width: 100%;
   height: 100%;
   text-align: center;
@@ -81,7 +80,7 @@ ul.social-network li {
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
-  border: 1px solid var(--color-dark-blue);
+  /* border: 1px solid var(--color-dark-blue); */
   border-radius: 1.25rem;
 }
 
@@ -101,21 +100,29 @@ ul.social-network li {
   color: black;
 }
 
+.text-color{
+  color: var(--color-yellow);
+}
+
+blockquote{
+  color: var(--color-dark-blue);
+}
 /* Style the back side */
 .flip-card-back {
   position: center;
+  right: 50px;
   width: 100%;
   height: 100%;
-  background-color: var(--color-mustard);
+  background-color: var(--color-blue);
   border-radius: 1.25rem;
-  color: var(--color-soft-white);
+  color: var(--color-yellow);
   transform: rotateY(180deg);
 }
 
 /* ESTILIZAÇÃO CUSTOMIZADA DO CARD FEITA PELA EQUIPE */
 
 .flip-card-back a {
-  color: var(--color-soft-white);
+  color: var(--color-yellow);
   font-size: 1.25rem;
 }
 
