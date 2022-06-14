@@ -1,15 +1,15 @@
-<div class="container-fluid">
-  <div class="row card-shadow atualizar-card">
-    <div class="form-area font-cadastrar">
-      <h1 class="text-center mt-3">Atualizar Informações</h1>
+<div class="container-fluid background-color">
+  <div class="row card-shadow atualizar-card ">
+    <div class="form-area">
+      <h1 class="text-center mt-3 font-dark-gray">Atualizar Informações</h1>
       <form>
         <div class="row p-3">
           <div class="col-md-12">
-            <div class="form-group">
+            <div class="form-group font-dark-gray">
               <label for="descricao">Título:</label>
               <input
                 type="text"
-                class="form-control border border-warning border-r"
+                class="form-control border color-border border-r"
                 id="titulo"
                 name="titulo"
                 [(ngModel)]="evento.titulo"
@@ -17,11 +17,11 @@
             </div>
           </div>
           <div class="col-md-12">
-            <div class="form-group">
+            <div class="form-group font-dark-gray">
               <label for="descricao">Descrição</label>
               <input
                 type="text"
-                class="form-control border border-warning border-r"
+                class="form-control border color-border border-r"
                 id="descricao"
                 name="descricao"
                 [(ngModel)]="evento.descricao"
@@ -29,11 +29,11 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="form-group form-group-data">
+            <div class="form-group form-group-data font-dark-gray">
               <label for="data">Data:</label>
               <input
                 type="date"
-                class="form-control border border-warning border-r ml-2"
+                class="form-control border color-border border-r ml-2"
                 id="data"
                 name="data"
                 [(ngModel)]="evento.data"
@@ -41,9 +41,9 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="participantes-estimados-wrapper">
+            <div class="participantes-estimados-wrapper font-light-gray">
               <h5>Estimativa de participantes necessários:</h5>
-              <h5 *ngIf="evento.postagens.length > 0">
+              <h5 class="mr-5" *ngIf="evento.postagens.length > 0">
                 {{ evento.postagens.length }}
               </h5>
               <h5 *ngIf="evento.postagens.length === 0">0</h5>
@@ -54,7 +54,7 @@
         <div class="d-flex justify-content-around p-3">
           <button
             type="submit"
-            class="btn btn-warning btn-lg btn-block btn-cad"
+            class="btn button"
             (click)="atualizar()"
           >
             Atualizar
