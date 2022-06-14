@@ -106,6 +106,7 @@ button.btn-criar:hover {
 
 .btn-editar-post {
   width: 45%;
+  
 }
 .btn-outline{
   border-color: var(--color-light-gray);
@@ -113,11 +114,12 @@ button.btn-criar:hover {
 
 .btn-editar-post span {
   font-weight: 600;
+  color:  var(--color-light-gray);
 }
 
 .btn-editar-post span:hover {
   font-weight: 600;
-  color: white;
+  color: var(--color-yellow);
 }
 
 .btn-excluir-post {
@@ -126,11 +128,12 @@ button.btn-criar:hover {
 
 .btn-excluir-post span {
   font-weight: 600;
+  color:  var(--color-light-gray);
 }
 
 .btn-excluir-post span:hover {
   font-weight: 600;
-  color: white;
+  color: var(--color-yellow);
 }
 
 h4,

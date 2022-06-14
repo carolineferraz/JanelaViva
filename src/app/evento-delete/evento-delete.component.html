@@ -1,15 +1,15 @@
-<div class="container-fluid">
+<div class="container-fluid background-color">
   <div class="row card-shadow atualizar-card">
     <div class="form-area font-cadastrar">
-      <h2 class="text-center mt-3">Tem certeza que deseja deletar esse Evento?</h2>
+      <h2 class="text-center mt-3 font-dark-gray pl-3 pr-3">Tem certeza que deseja deletar esse Evento?</h2>
       <form>
         <div class="row p-3">
           <div class="col-md-12">
-            <div class="form-group">
-              <label for="descricao">Título:</label>
+            <div class="form-group ">
+              <label class="font-dark-gray" for="descricao">Título:</label>
               <input
                 type="text"
-                class="form-control border border-warning border-r"
+                class="form-control color-border border-r"
                 id="titulo"
                 name="titulo"
                 [(ngModel)]="evento.titulo"
@@ -18,11 +18,11 @@
             </div>
           </div>
           <div class="col-md-12">
-            <div class="form-group">
+            <div class="form-group font-dark-gray">
               <label for="descricao">Descrição</label>
               <input
                 type="text"
-                class="form-control border border-warning border-r"
+                class="form-control color-border border-r"
                 id="descricao"
                 name="descricao"
                 [(ngModel)]="evento.descricao"
@@ -31,11 +31,11 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="form-group form-group-data">
+            <div class="form-group form-group-data font-dark-gray">
               <label for="data">Data:</label>
               <input
                 type="date"
-                class="form-control border border-warning border-r ml-2"
+                class="form-control color-border border-r ml-2"
                 id="data"
                 name="data"
                 [(ngModel)]="evento.data"
@@ -44,9 +44,9 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="participantes-estimados-wrapper">
+            <div class="participantes-estimados-wrapper font-light-gray">
               <h5>Estimativa de participantes necessários:</h5>
-              <h5>{{ evento.postagens.length }}</h5>
+              <h5 class="mr-5">{{ evento.postagens.length }}</h5>
             </div>
           </div>
         </div>
