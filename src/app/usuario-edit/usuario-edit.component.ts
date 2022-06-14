@@ -39,9 +39,11 @@ export class UsuarioEditComponent implements OnInit {
     this.authService.getByIdUsuario(id).subscribe({
       next: (res: Usuario) => {
         this.usuario = res;
+        this.usuario.senha = ''
       },
       error: err => console.log(err)
     })
+
   }
 
   confirmSenha(e: any) {
