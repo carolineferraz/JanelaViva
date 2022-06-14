@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Usuario } from '../model/Usuario';
 import { UsuarioLogin } from '../model/UsuarioLogin';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { UsuarioService } from '../service/usuario.service';
 
@@ -22,6 +23,7 @@ export class UsuarioEditComponent implements OnInit {
   constructor(private router: Router,
     private authService: AuthService,
     private usuarioService: UsuarioService,
+    private alertasService: AlertasService
   ) { }
 
   ngOnInit(): void {
@@ -54,7 +56,7 @@ export class UsuarioEditComponent implements OnInit {
     this.usuario.tipo = environment.tipo
 
     if (this.usuario.senha != this.confirmarSenh) {
-      alert('Senha incorreta!')
+      this.alertasService.showAlertDanger('Senha incorreta!')
     } else {
       console.log(this.usuario)
       this.usuarioService.putUsuario(this.usuario).subscribe({
@@ -72,7 +74,7 @@ export class UsuarioEditComponent implements OnInit {
           environment.tipo = '';
           environment.habilidades = '';
           this.router.navigate(['/entrar'])
-          alert('Usuário atualizado com sucesso! Entre novamente.')
+          this.alertasService.showAlertSuccess('Usuário atualizado com sucesso! Entre novamente.')
         },
         error: err => console.log(err)
       })

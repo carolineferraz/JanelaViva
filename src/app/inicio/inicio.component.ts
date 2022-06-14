@@ -39,4 +39,13 @@ export class InicioComponent implements OnInit {
     })
   }
 
+  ordenaPorData(postagens: Postagem[]) {
+    return postagens.sort((p1, p2) => {
+      let p1Data = new Date(p1.data).getTime();
+      let p2Data = new Date(p2.data).getTime();
+
+      return p2Data - p1Data;
+    })
+  }
+
 }

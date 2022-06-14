@@ -11,7 +11,7 @@
   <!-- FIM DO COMPONENTE PARA ESCRITA DE COMENTÁRIOS -->
 
   <!-- INÍCIO DO COMPONENTE DE PUBLICAÇÃO -->
-  <div *ngFor="let postagem of postagemService.postagens">
+  <div *ngFor="let postagem of ordenaPorData(postagemService.postagens)">
     <div class="card card-shadow mb-2" style="width: 100%">
       <div class="card-header">
         <div class="app-user-profile-wrapper">
@@ -63,9 +63,11 @@
           <p>Comentar</p>
         </div>
       </div>
-      <hr>
+      <hr />
       <div class="row d-flex align-items-center flex-nowrap">
-        <div class="col-md-2 d-flex justify-content-center align-items-center ml-2">
+        <div
+          class="col-md-2 d-flex justify-content-center align-items-center ml-2"
+        >
           <div class="app-user-profile-wrapper">
             <div class="user-profile-picture-border normal-size">
               <div>
