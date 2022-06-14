@@ -6,6 +6,11 @@
     <h4 class="card-title">Próximos Eventos</h4>
     <div *ngFor="let evento of ordenaPorData(eventoService.eventos)">
       <div class="evento-area">
+
+        <p class="pt-3 ">
+          <i class="fa fa-circle-thin pr-2 font-size " aria-hidden="true"></i>{{ evento.titulo }}</p>
+        <span class="pb-2 font-color">Data: {{ evento.data | date: "dd/MM/yyyy" }}</span>
+
         <p class="pt-3">
           <i class="fa fa-circle-thin pr-2 font-size" aria-hidden="true"></i
           >{{ evento.titulo }}
@@ -13,6 +18,7 @@
         <span class="pb-2 font-color"
           >Data: {{ evento.data | date: "dd/MM/yyyy" }}</span
         >
+
       </div>
     </div>
   </div>
