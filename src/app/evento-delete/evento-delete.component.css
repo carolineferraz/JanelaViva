@@ -96,3 +96,6 @@ h2 {
 .form-control{
   background-color: var(--color-soft-white);
 }
+.margin-card{
+  margin-left: 25px;
+}
