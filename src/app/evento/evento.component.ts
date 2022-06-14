@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Evento } from '../model/Evento';
 import { Postagem } from '../model/Postagem';
+import { AlertasService } from '../service/alertas.service';
 import { EventoService } from '../service/evento.service';
 
 @Component({
@@ -19,12 +20,13 @@ export class EventoComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private eventoService: EventoService
+    private eventoService: EventoService,
+    private alertasService: AlertasService
   ) { }
 
   ngOnInit() {
     if (environment.token == '') {
-      alert('Sua seção expirou, faça o login novamente.')
+      this.alertasService.showAlertInfo('Sua seção expirou, faça o login novamente.');
       this.router.navigate(['/entrar'])
     }
 
@@ -42,13 +44,13 @@ export class EventoComponent implements OnInit {
 
   cadastrar() {
     if (this.tipoUsuario === 'vol') {
-      alert('Você não tem permissão para criar evento!');
+      this.alertasService.showAlertInfo('Você não tem permissão para criar evento!');
       return;
     }
 
     this.eventoService.postEvento(this.evento).subscribe((resp: Evento) => {
       this.evento = resp
-      alert('Evento cadastrado com sucesso!')
+      this.alertasService.showAlertInfo('Evento cadastrado com sucesso!');
       this.findAllEventos()
       this.evento = new Evento()
     })

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { EventoService } from 'src/app/service/evento.service';
 import { window } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-evento-edit',
@@ -17,7 +18,8 @@ export class EventoEditComponent implements OnInit {
   constructor(
     private eventoService: EventoService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertasService: AlertasService
 
   ) { }
 
@@ -50,7 +52,7 @@ export class EventoEditComponent implements OnInit {
       next: (res: Evento) => {
         this.evento = res;
         console.log(res)
-        alert('Evento atualizado com sucesso!')
+        this.alertasService.showAlertSuccess('Evento atualizado com sucesso!')
         this.getAllEventos()
         this.router.navigate(['/inicio'])
       },

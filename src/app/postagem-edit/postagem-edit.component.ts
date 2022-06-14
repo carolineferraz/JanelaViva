@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Evento } from '../model/Evento';
 import { Postagem } from '../model/Postagem';
+import { AlertasService } from '../service/alertas.service';
 import { EventoService } from '../service/evento.service';
 import { PostagemService } from '../service/postagem.service';
 
@@ -22,7 +23,8 @@ export class PostagemEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private postagemService: PostagemService,
-    private eventoService: EventoService
+    private eventoService: EventoService,
+    private alertasService: AlertasService
 
   ) { }
 
@@ -54,7 +56,7 @@ export class PostagemEditComponent implements OnInit {
 
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem atualizada com sucesso!')
+      this.alertasService.showAlertSuccess('Postagem atualizada com sucesso!')
 
       this.router.navigate(['/usuario-postagens'])
     })
