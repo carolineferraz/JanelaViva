@@ -39,7 +39,6 @@ export class UsuarioEditComponent implements OnInit {
     this.authService.getByIdUsuario(id).subscribe({
       next: (res: Usuario) => {
         this.usuario = res;
-        console.log(this.usuario)
       },
       error: err => console.log(err)
     })
@@ -51,10 +50,11 @@ export class UsuarioEditComponent implements OnInit {
 
   atualizar() {
     this.usuario.tipo = environment.tipo
-    console.log('Antes: ' + this.usuario)
+
     if (this.usuario.senha != this.confirmarSenh) {
       alert('Senha incorreta!')
     } else {
+      console.log(this.usuario)
       this.usuarioService.putUsuario(this.usuario).subscribe({
         next: (res: Usuario) => {
           this.usuario = res;
@@ -62,21 +62,15 @@ export class UsuarioEditComponent implements OnInit {
           this.usuarioLogin.senha = this.confirmarSenh;
 
           console.log('Depois: ' + this.usuario)
-
-          this.authService.entrar(this.usuarioLogin).subscribe({
-            next: (res: UsuarioLogin) => {
-              this.usuarioLogin = res;
-              environment.token = this.usuarioLogin.token;
-              environment.id = this.usuarioLogin.id;
-              environment.nome = this.usuarioLogin.nome;
-              environment.avaliacao = this.usuarioLogin.avaliacao;
-              environment.habilidades = this.usuarioLogin.habilidades;
-              this.usuarioService.usuario = this.usuario;
-              alert('Usuário atualizado com sucesso!')
-              this.router.navigate(['/inicio'])
-            },
-            error: err => console.log(err)
-          })
+          environment.token = '';
+          environment.id = 0;
+          environment.avaliacao = 0;
+          environment.nome = '';
+          environment.foto = '';
+          environment.tipo = '';
+          environment.habilidades = '';
+          this.router.navigate(['/entrar'])
+          alert('Usuário atualizado com sucesso! Entre novamente.')
         },
         error: err => console.log(err)
       })
