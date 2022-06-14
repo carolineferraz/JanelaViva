@@ -6,7 +6,7 @@ h2 {
 
 .card-shadow {
   box-shadow: 5px 7px 11px rgba(0, 0, 0, 0.25);
-  border: 3px solid var(--color-yellow);
+  border: 1px solid var(--color-yellow);
   border-radius: 1.25rem;
 }
 
@@ -34,9 +34,9 @@ h2 {
 }
 
 .participantes-estimados-wrapper h5 + h5 {
-  border: 1px solid var(--color-yellow);
-  background-color: #ccc;
-  color: #000;
+  border: 1px solid var(--color-dark-blue);
+  background-color: var(--color-blue);
+  color: var(--color-dark-blue);
   padding: 0.3rem 0.5rem;
 }
 
@@ -72,14 +72,27 @@ h2 {
 }
 
 .btn-sim {
+  background-color: var(--color-yellow);
   width: 45%;
 }
 
 .btn-sim span {
-  color: var(--color-yellow);
   font-weight: 600;
+  color: white;
 }
 
 .btn-sim span:hover {
-  color: white;
+  background-color: var(--color-mustard)
+}
+.font-dark-gray{
+  color: #343a40;
+}
+.font-light-gray{
+  color: var(--color-light-gray);
+}
+.color-border{
+  border-color: var(--color-light-gray);
+}
+.form-control{
+  background-color: var(--color-soft-white);
 }
