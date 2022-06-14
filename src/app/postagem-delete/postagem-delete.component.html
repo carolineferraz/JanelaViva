@@ -1,12 +1,13 @@
-<div class="container-fluid">
-  <div class="row card-shadow atualizar-card">
-    <div class="form-area font-cadastrar">
-      <h1>Atualizar Postagem</h1>
-      <form>
-        <div class="row">
+<div class="container-fluid mt-0">
+  <div class="row">
+    <div class="col-md-12 mt-0">
+      <div class="card card-shadow">
+        <div class="row d-flex justify-content-center mt-4 mb-5">
           <div class="col-md-12">
-            <div class="form-group">
-              <label for="descricao">Descrição:</label>
+
+            <h1 class="text-center">Deletar Postagem</h1>
+            <div class="form-group m-3">
+              <label for="descricao">Descrição: <img src="../../assets/img/descricao.png" alt="" width="22px"></label>
               <input
                 [(ngModel)]="postagem.descricao"
                 type="text"
@@ -16,10 +17,10 @@
                 name="descricao"
               />
             </div>
-          </div>
-          <div class="col-md-12">
-            <div class="form-group">
-              <label for="foto">Foto:</label>
+          
+            
+            <div class="form-group m-3">
+              <label for="foto">Foto: <i class="fa fa-picture-o pl-2" aria-hidden="true"></i></label>
               <input
                 [(ngModel)]="postagem.foto"
                 type="text"
@@ -29,10 +30,10 @@
                 placeholder="Insira uma nova imagem"
               />
             </div>
-          </div>
-          <div class="col-md-12">
-            <div class="form-group">
-              <label for="descricao">Evento:</label>
+          
+          
+            <div class="form-group m-3">
+              <label for="descricao">Evento: <i class="fa fa-calendar-check-o" aria-hidden="true"></i></label>
               <input
                 [(ngModel)]="postagem.evento.titulo"
                 type="text"
@@ -42,18 +43,21 @@
                 disabled
               />
             </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-danger mr-4" routerLink="/postagem">
+        
+      <div class="row d-flex justify-content-center ">
+        <div class="col-md-12 btn btn-group w-100">
+            <button class="btn btn-nao mr-4" routerLink="/postagem">
               Não
             </button>
-            <button class="btn btn-success" (click)="apagar()">Sim</button>
+            <button class="btn btn-sim" (click)="apagar()">Sim</button>
           </div>
         </div>
-      </form>
+        </div>
+      </div>
+
+      </div>
+      </div>
     </div>
   </div>
-</div>
+
+
