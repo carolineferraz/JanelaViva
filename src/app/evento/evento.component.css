@@ -174,3 +174,6 @@ small {
 .size-data{
   block-size: 30;
 }
+.margem-card{
+  margin-left: 25px;
+}

@@ -72,3 +72,6 @@ button {
 .color-border{
   border-color: var(--color-light-gray);
 }
+.margin-card{
+  margin-left: 25px;
+}

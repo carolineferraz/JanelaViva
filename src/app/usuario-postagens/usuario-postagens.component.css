@@ -89,5 +89,7 @@ small {
 .font-introducao{
   color: #343a40;
 }
-
+.margem-card{
+  margin-left: 25px;
+}
 
