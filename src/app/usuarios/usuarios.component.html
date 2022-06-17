@@ -1,0 +1,21 @@
+<div class="card card-shadow background-color">
+  <div class="row d-flex">
+    <div class="col-xl-12 p-3">
+      <h2 class="text-center">Quem tá por aqui?</h2>
+      <div class="row d-flex justify-content-center">
+        <div *ngFor="let usuario of usuarios" class="col-md-1 mr-2 mt-4">
+          <div class="user-profile-picture-border small-size">
+            <img
+              src="{{
+                !checaStrImg(usuario.foto)
+                  ? imgPlaceholder
+                  : usuario.foto.trim()
+              }}"
+              alt="foto de usuário"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

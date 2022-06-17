@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Evento } from 'src/app/model/Evento';
 import { EventoService } from 'src/app/service/evento.service';
 import { environment } from 'src/environments/environment.prod';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-evento-delete',
@@ -18,7 +19,8 @@ export class EventoDeleteComponent implements OnInit {
 
     private router: Router,
     private eventoService: EventoService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertasService: AlertasService
 
   ) { }
 
@@ -37,7 +39,7 @@ export class EventoDeleteComponent implements OnInit {
   }
   apagar() {
     this.eventoService.deleteEvento(this.idEvento).subscribe(() => {
-      alert('Evento deletado com sucesso!')
+      this.alertasService.showAlertSuccess('Evento deletado com sucesso!')
       this.router.navigate(['/inicio'])
     })
   }

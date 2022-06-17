@@ -4,13 +4,11 @@
 <app-rodape></app-rodape> -->
 <!-- <router-outlet></router-outlet>  -->
 <div
-  class="{{
+  *ngIf="
     authService.logado() &&
     rotaAtual !== '/entrar' &&
     rotaAtual !== '/cadastrar'
-      ? ''
-      : 'd-none'
-  }}"
+  "
 >
   <app-menu-logado></app-menu-logado>
 </div>

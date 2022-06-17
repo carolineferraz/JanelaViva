@@ -1,75 +1,86 @@
-<div class="container-fluid margem-card">
-  <div class="row card-shadow atualizar-card">
+<div class="container-fluid d-flex justify-content-center align-items-center margem-card ">
+  <div class="row card-shadow d-flex justify-content-center align-items-center atualizar-card align-card">
     <div class="form-area font-cadastrar p-3">
-      <h1 class="mb-4">Atualizar Informações</h1>
+      <h1 class="mb-4 font-dark-gray">Atualizar Informações</h1>
       <form>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group text-start">
-              <label class="text-start" for="nome">Digite seu nome:</label>
+              <label class="text-start font-dark-gray" for="nome">Digite seu nome:</label>
               <input
                 [(ngModel)]="usuario.nome"
                 name="nome"
                 type="text"
-                class="form-control border border-warning border-r"
+                class="form-control color-border border-r"
                 placeholder="Digite seu nome"
               />
             </div>
-            <div class="form-group">
+            <div class="form-group font-dark-gray">
               <label for="">Email:</label>
               <input
                 [(ngModel)]="usuario.email"
                 name="email"
                 type="email"
-                class="form-control border border-warning border-r"
+                class="form-control color-border border-r"
                 placeholder="Digite seu email"
                 disabled
               />
             </div>
-            <div class="form-group">
-              <label for="">Foto de Perfil:</label>
-              <input
-                [(ngModel)]="usuario.foto"
-                name="idade"
-                type="text"
-                class="form-control border border-warning border-r"
-                placeholder="Link da imagem"
-              />
-            </div>
+           
           </div>
           <div class="col-md-6">
-            <div class="form-group">
+            <div class="form-group font-dark-gray">
               <label for="">Nova senha:</label>
               <input
                 name="senha"
                 type="password"
-                class="form-control border border-warning border-r"
+                class="form-control color-border border-r"
                 placeholder="Digite sua senha"
               />
             </div>
-            <div class="form-group">
+            <div class="form-group font-dark-gray">
               <label for="comfirmarSenha">Confirmar nova senha:</label>
               <input
                 (input)="confirmSenha($event)"
                 [(ngModel)]="usuario.senha"
                 name="confirmarSenha"
                 type="password"
-                class="form-control border border-warning border-r"
+                class="form-control color-border border-r"
                 placeholder="Confirmar senha"
               />
             </div>
-            <div class="form-group"></div>
+            <div class="form-group font-dark-gray"></div>
           </div>
         </div>
+
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 font-dark-gray">
+            <div class="form-group font-dark-gray">
+              <label for="">Foto de Perfil:</label>
+              <input
+                [(ngModel)]="usuario.foto"
+                name="idade"
+                type="text"
+                class="form-control color-border border-r"
+                placeholder="Link da imagem"
+              />
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12 font-dark-gray">
             <div class="form-group">
               <label for="habilidades">Liste suas habilidades:</label>
               <input
                 [(ngModel)]="usuario.habilidades"
                 name="habilidades"
                 type="text"
-                class="form-control border border-warning border-r"
+                class="form-control color-border border-r"
               />
             </div>
           </div>
@@ -78,7 +89,7 @@
         <div class="d-flex justify-content-around">
           <button
             type="submit"
-            class="btn btn-warning btn-lg btn-block btn-cad"
+            class="button-editar"
             (click)="atualizar()"
           >
             Atualizar

@@ -26,6 +26,7 @@ import { UsuarioPostagensComponent } from './usuario-postagens/usuario-postagens
 import { UsuarioEditComponent } from './usuario-edit/usuario-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 
@@ -51,7 +52,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     EventoPostagensComponent,
     UsuarioPostagensComponent,
     UsuarioEditComponent,
-    AlertasComponent
+    AlertasComponent,
+    UsuariosComponent
 
   ],
   imports: [
