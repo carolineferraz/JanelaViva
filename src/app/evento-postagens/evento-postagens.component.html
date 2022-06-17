@@ -1,13 +1,20 @@
 <div class="container-fluid margem-card">
-  <div class="row">
-    <div class="col-md-12 card-shadow p-3 mb-3">
-      <h2 class="h2-1">Todas as Postagens do Evento:</h2>
-      <hr />
-      <h2 class="h2-2">Titulo:</h2>
-      <h2 class="h3">{{ evento.titulo }}</h2>
-      <h2 class="h2-2">Descrição:</h2>
-      <h2 class="h3">{{ evento.descricao }}</h2>
+  <div class="row card-shadow p-3 mb-3">    
+    <h2 class="h2-1  margem-txt"> Todas as Postagens do Evento:</h2>   
+    <div>
+      <hr>
+    <div class="col-md-12 mt-1 d-flex align-items">     
+      <div class="col-md-4">      
+        <img class="img-detalhe-evento" src="{{ evento.imagem }}" alt="" />
+      </div>
+      <div class="col-md-8">
+        <h5>Titulo:</h5>     
+        <h6>{{ evento.titulo }}</h6>
+        <h5>Descrição:</h5>
+        <h6>{{ evento.descricao }}</h6>
+      </div>
     </div>
+  </div>
   </div>
   <div class="row">
     <div class="col-md-12">
