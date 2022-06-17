@@ -19,6 +19,25 @@ label {
   border-radius: 0.8rem;
 }
 
+.btn-excluir {
+  border: 1px solid var(--color-yellow);
+  border-radius: 20px;
+  width: 100%;
+  color: var(--color-yellow);
+  height: 35px;
+  border-radius: 8px;
+} 
+
+
+.btn-excluir span {
+  font-weight: 600;
+  color: #FFC32D;
+}
+
+.btn-excluir span:hover {
+  color: white;
+}
+
 button.btn-att {
   border: 0px solid var(--color-yellow);
   background-color: var(--color-yellow);
