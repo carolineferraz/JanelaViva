@@ -30,9 +30,8 @@ export class EventoComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
-    this.tipoUsuario = environment.tipo;
     this.findAllEventos()
-    this.tipoUsuario = String(environment.id)
+    this.tipoUsuario = environment.tipo;
   }
 
   findAllEventos() {
