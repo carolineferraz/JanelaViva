@@ -22,6 +22,10 @@ export class UsuarioService {
   putUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.put<Usuario>('https://janela-viva.herokuapp.com/usuarios/atualizar', usuario, this.token)
   }
+
+  getUsuarios(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>('https://janela-viva.herokuapp.com/usuarios/all', this.token);
+  }
 }
 
 
