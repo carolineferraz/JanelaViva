@@ -227,3 +227,19 @@
 .margem-card{
   margin-left: 25px;
 }
+.btn-pesquisar{
+  border: 0px solid var(--color-yellow);
+  background-color: var(--color-yellow);
+  border-radius: 20px;
+  width: 30%;
+  color: #fff;
+  height: 35px;
+  border-radius: 8px;
+}
+.borda-pesquisar{
+  border-radius: 20px;
+  border-radius: 8px;
+  height: 35px;
+  border: 1px solid var(--color-yellow);
+
+}

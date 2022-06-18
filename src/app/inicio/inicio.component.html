@@ -9,17 +9,17 @@
     </div>
   </div>
   <!-- FIM DO COMPONENTE PARA ESCRITA DE COMENTÁRIOS -->
-  <div class="form-group">
+  <div class="form-group d-flex align-items mt-5 mb-3">
     <input
       [(ngModel)]="textoPesquisa"
-      class="form-control mr-sm-2 rounded-10"
+      class="form-control mr-sm-2 rounded-10 borda-pesquisar"
       type="search"
       placeholder="Pesquisar publicação"
       aria-label="Pesquisar"
       id="input-pesquisar"
       name="pesquisar"
     />
-    <button (click)="pesquisar()">Pesquisar</button>
+    <button class="btn-pesquisar" (click)="pesquisar()">Pesquisar</button>
   </div>
 
   <!-- INÍCIO DO COMPONENTE DE PUBLICAÇÃO -->
