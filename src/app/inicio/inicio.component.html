@@ -9,6 +9,18 @@
     </div>
   </div>
   <!-- FIM DO COMPONENTE PARA ESCRITA DE COMENTÁRIOS -->
+  <div class="form-group">
+    <input
+      [(ngModel)]="textoPesquisa"
+      class="form-control mr-sm-2 rounded-10"
+      type="search"
+      placeholder="Pesquisar publicação"
+      aria-label="Pesquisar"
+      id="input-pesquisar"
+      name="pesquisar"
+    />
+    <button (click)="pesquisar()">Pesquisar</button>
+  </div>
 
   <!-- INÍCIO DO COMPONENTE DE PUBLICAÇÃO -->
   <div *ngFor="let postagem of ordenaPorData(postagemService.postagens)">
@@ -46,7 +58,7 @@
         <span>1 comentário</span>
       </div>
       <div class="like-comment-action-area mb-1">
-        <div class="like-action-area">
+        <div class="like-action-area" (click)="curtir(postagem.id)">
           <img
             src="../../assets/img/like-big.svg"
             alt="botão de ação de curtir"
