@@ -76,7 +76,11 @@ export class InicioComponent implements OnInit {
 
   checaSeCurtiu() {
     if (this.postagensCurtidas.includes(this.postagemCurtida)) {
-      this.postagemCurtida.curtidas--;
+      if (this.postagemCurtida.curtidas - 1 < 0) {
+        this.postagemCurtida.curtidas = 0;
+      } else {
+        this.postagemCurtida.curtidas--;
+      }
       this.postagensCurtidas = this.postagensCurtidas.filter(p => p.id !== this.postagemCurtida.id);
     } else {
       this.postagemCurtida.curtidas++;
