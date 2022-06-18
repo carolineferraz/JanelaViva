@@ -14,6 +14,9 @@ import { UsuarioService } from '../service/usuario.service';
 })
 export class InicioComponent implements OnInit {
 
+  textoPesquisa: string;
+  postagemCurtida: Postagem;
+  postagensCurtidas: Postagem[] = [];
 
   constructor(
     private router: Router,
@@ -33,10 +36,17 @@ export class InicioComponent implements OnInit {
   getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe({
       next: (postagens: Postagem[]) => {
-        this.postagemService.postagens = postagens
+        this.postagemService.postagens = this.textoPesquisa.trim().length > 0 ?
+          postagens.filter((p) => p.descricao.toLowerCase().indexOf(this.textoPesquisa.trim().toLowerCase()) >= 0) : postagens
+
+        this.textoPesquisa = '';
       },
       error: err => console.log(err)
     })
+  }
+
+  pesquisar() {
+    this.getAllPostagens();
   }
 
   ordenaPorData(postagens: Postagem[]) {
@@ -46,6 +56,32 @@ export class InicioComponent implements OnInit {
 
       return p2Data - p1Data;
     })
+  }
+
+  curtir(id: number) {
+    this.postagemCurtida = this.postagemPorId(id) as Postagem;
+    this.checaSeCurtiu();
+
+    this.postagemService.putPostagem(this.postagemCurtida).subscribe({
+      next: (res: Postagem) => {
+        console.log(res);
+      },
+      error: err => console.log(err),
+    });
+  }
+
+  postagemPorId(id: number) {
+    return this.postagemService.postagens.find(p => p.id === id);
+  }
+
+  checaSeCurtiu() {
+    if (this.postagensCurtidas.includes(this.postagemCurtida)) {
+      this.postagemCurtida.curtidas--;
+      this.postagensCurtidas = this.postagensCurtidas.filter(p => p.id !== this.postagemCurtida.id);
+    } else {
+      this.postagemCurtida.curtidas++;
+      this.postagensCurtidas.push(this.postagemCurtida);
+    }
   }
 
 }
