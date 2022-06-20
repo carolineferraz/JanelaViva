@@ -41,5 +41,5 @@ Vai dar um 👋🏽 pra gente no LinkedIn:
 - Caroline Ferraz
 - Danielle Guimarães
 - Fábio Monteiro [![Linkedin Badge](https://img.shields.io/badge/-fabiomrm-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/fabiomrm/)](https://www.linkedin.com/in/fabiomrm/)
-- Janderson Paixão
+- Janderson Paixão [![Linkedin Badge](https://img.shields.io/badge/-jandersonpaixao-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/jandersonpaixao/)](https://www.linkedin.com/in/jandersonpaixao/)
 - Luana Siqueira  [![Linkedin Badge](https://img.shields.io/badge/-luanasiqueira-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/luana-chaves-siqueira/)](https://www.linkedin.com/in/luana-chaves-siqueira/)
