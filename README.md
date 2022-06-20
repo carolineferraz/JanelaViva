@@ -39,7 +39,7 @@ Vai dar um 👋🏽 pra gente no LinkedIn:
 
 - Aretha Queiroz
 - Caroline Ferraz
-- Danielle Guimarães
+- Danielle Guimarães [![Linkedin Badge](https://img.shields.io/badge/-daniellegmrs-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/danielle-guimaraes-/)](https://www.linkedin.com/in/danielle-guimaraes-/)
 - Fábio Monteiro [![Linkedin Badge](https://img.shields.io/badge/-fabiomrm-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/fabiomrm/)](https://www.linkedin.com/in/fabiomrm/)
 - Janderson Paixão [![Linkedin Badge](https://img.shields.io/badge/-jandersonpaixao-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/jandersonpaixao/)](https://www.linkedin.com/in/jandersonpaixao/)
 - Luana Siqueira  [![Linkedin Badge](https://img.shields.io/badge/-luanasiqueira-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/luana-chaves-siqueira/)](https://www.linkedin.com/in/luana-chaves-siqueira/)
