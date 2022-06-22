@@ -38,7 +38,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 Vai dar um 👋🏽 pra gente no LinkedIn:
 
 - Aretha Queiroz [![Linkedin Badge](https://img.shields.io/badge/-arethaqueiroz-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/aretha-queiroz/)](https://www.linkedin.com/in/aretha-queiroz/)
-- Caroline Ferraz
+- Caroline Ferraz [![Linkedin Badge](https://img.shields.io/badge/-carolineferraz-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/ferraz-caroline/)](https://www.linkedin.com/in/ferraz-caroline/)
 - Danielle Guimarães [![Linkedin Badge](https://img.shields.io/badge/-daniellegmrs-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/danielle-guimaraes-/)](https://www.linkedin.com/in/danielle-guimaraes-/)
 - Fábio Monteiro [![Linkedin Badge](https://img.shields.io/badge/-fabiomrm-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/fabiomrm/)](https://www.linkedin.com/in/fabiomrm/)
 - Janderson Paixão [![Linkedin Badge](https://img.shields.io/badge/-jandersonpaixao-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/jandersonpaixao/)](https://www.linkedin.com/in/jandersonpaixao/)
